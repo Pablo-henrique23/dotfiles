@@ -1,0 +1,139 @@
+// -*- mode: jsonc -*-
+{
+    // "layer": "top", // Waybar at top layer
+    // "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 25, // Waybar height (to be removed for auto height)
+    // "width": 1280, // Waybar width
+    "spacing": 4, // Gaps between modules (4px)
+    // Choose the order of the modules
+    "modules-left": [
+	"custom/apps",
+	"custom/firefox",
+	"custom/code",
+        "custom/media"
+    ],
+    "modules-center": [
+        "hyprland/window",
+	"hyprland/workspaces"
+    ],
+    "modules-right": [
+        "clock",
+	"pulseaudio",
+       // "network",
+        "battery",
+        "battery#bat2",
+	"tray"
+    ],
+    "custom/apps": {
+	"format": "  ",
+	"on-click": "rofi -show drun"
+    },
+
+    "custom/code": {
+	"format": " ",
+	"on-click": "code"
+    },
+
+    "custom/firefox": {
+	"format": " ",
+	"on-click": "firefox"
+    },
+
+    // Modules configuration
+     "hyprland/workspaces": {
+         "disable-scroll": true,
+         "all-outputs": true,
+         "warp-on-scroll": false,
+         "format": "{icon}",
+         "format-icons": {
+             "urgent": "",
+             "active": "",
+             "default": ""
+         },
+	 "on-click": "activate",
+	 "persistent-workspaces": {
+	     "*": 3
+	 },
+	 "window-rewrite": {
+	     "konsole":"",
+	     "firefox": "󰈹",
+	     "code": "󰨞"
+	 },
+	 "move-to-monitor": true
+    },  
+
+    "hyprland/window": {
+	"icon-size": "20",
+	"format": "{class}",
+	"rewrite": {
+            "firefox": "󰈹",
+	    "code": "󰨞",
+	    "org.kde.konsole":"",
+	    "kitty": "󰞷"
+         },
+	 "icon": "true"
+    },
+
+    "tray": {
+        "icon-size": 20,
+        "spacing": 10
+    },
+
+    "clock": {
+        "interval": 60,
+        "tooltip": true,
+        "format": "{:%a %d %b %H:%M}",
+        "tooltip-format": "{:%d/%m/%Y}"
+    },
+
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-full": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "battery#bat2": {
+        "bat": "BAT2"
+    },
+/*    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+	"on-click": "bash /home/pablo/.config/rofi/rofi-wifi-menu/rofi-wifi-menu.sh"
+    },
+    */
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{volume}% {icon} {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    }
+
+
+}
