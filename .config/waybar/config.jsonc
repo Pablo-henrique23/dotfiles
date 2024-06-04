@@ -14,6 +14,7 @@
         "hyprland/window"
     ],
     "modules-right": [
+	"group/info",
         "battery",
         "battery#bat2",
         "pulseaudio",
@@ -24,7 +25,7 @@
          "disable-scroll": true,
          "all-outputs": true,
          "warp-on-scroll": false,
-         "format": "{icon}",
+         "format": "{id}",
          "format-icons": {
              "urgent": "",
              "active": "",
@@ -34,6 +35,7 @@
 		 "*": 3
 	}
     },
+    
     "hyprland/window": {
 	"format": "{initialTitle}",
 	"rewrite": {
@@ -43,10 +45,7 @@
 		"kitty": ""
     	}	
     },
-    "tray": {
-        "icon-size": 17,
-        "spacing": 10
-    },
+    
     "clock": {
 	"interval": 60,
         "format": "{:%a, %H:%M}",
@@ -54,6 +53,35 @@
 	"tooltip": true,
 	"tooltip-format": "{:%d/%m/%y}"
     },
+	
+    "cpu": {
+	"interval": 5,
+        "format": " {usage}%"
+    },
+
+    "memory": {
+       "interval": 5,
+       "format": "{percentage}%", 
+       "tooltip-format": "memory usage"
+    },
+
+    "disk": {
+       "interval": 5,
+       "format": "{percentage_used}%",
+       "unit": "MB",
+       "tooltip-format": "disk usage"
+    },
+    
+    "temperature": {
+       "format": " {temperatureC}°C",
+       "tooltip-format": "temperature"
+    },
+
+    "group/info": {
+	"orientation": "horizontal",
+	"modules": ["cpu", "memory", "disk", "temperature"]
+    },
+
     "battery": {
         "states": {
             // "good": 95,
@@ -69,9 +97,16 @@
         // "format-full": "",
         "format-icons": ["", "", "", "", ""]
     },
+    
     "battery#bat2": {
         "bat": "BAT2"
     },
+    
+    "tray": {
+        "icon-size": 17,
+	"spacing": 10
+    },
+
     "pulseaudio": {
         "format": "{volume}% {icon}", // {format_source}",
 //        "format-bluetooth": "{volume}% {icon} {format_source}",
