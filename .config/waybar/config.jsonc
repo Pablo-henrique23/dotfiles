@@ -79,7 +79,12 @@
 
     "group/info": {
 	"orientation": "horizontal",
-	"modules": ["cpu", "memory", "disk", "temperature"]
+	"modules": ["cpu", "memory", "disk", "custom/separator", "temperature"]
+    },
+	
+    "custom/separator": {
+        "tooltip": false,
+	"format": "|"
     },
 
     "battery": {

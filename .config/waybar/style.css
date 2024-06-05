@@ -196,6 +196,12 @@ label:focus {
     color: @color12;
 }
 
+#custom-separator {
+   padding: 0 2px;
+   background-color: transparent;
+   color: @color12;   
+}
+
 #backlight {
     background-color: #90b1b1;
 }
