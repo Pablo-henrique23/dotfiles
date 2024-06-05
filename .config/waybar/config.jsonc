@@ -76,10 +76,22 @@
        "format": " {temperatureC}°C",
        "tooltip-format": "temperature"
     },
+    
+    "network": {
+        "interval": 5,
+	"format": "{essid}",
+	"format-wifi": "󱚻 {bandwidthTotalBytes}",
+	"format-disconnected": "󰖪",
+	"max-length": 15,
+	"on-click": "nm-applet --indicator",
+	"on-click-right": "killall nm-applet",
+	"tooltip-format": "{ipaddr}/{essid}"
+
+    },
 
     "group/info": {
 	"orientation": "horizontal",
-	"modules": ["cpu", "memory", "disk", "custom/separator", "temperature"]
+	"modules": ["cpu", "memory", "disk", "custom/separator", "temperature", "custom/separator", "network"]
     },
 	
     "custom/separator": {

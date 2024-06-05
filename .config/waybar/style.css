@@ -139,15 +139,15 @@ button:hover {
 
 @keyframes blink {
     to {
-        background-color: #ffffff;
-        color: #000000;
+        background-color: transparent;
+        color: red;
     }
 }
 
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
-    background-color: #f53c3c;
-    color: #ffffff;
+    background-color: transparent;
+    color: @color15;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: steps(12);
@@ -207,11 +207,13 @@ label:focus {
 }
 
 #network {
-    background-color: #2980b9;
+    background-color: transparent;
+    color: @color12;
 }
 
 #network.disconnected {
-    background-color: #f53c3c;
+    background-color: transparent;
+    color: @color12;
 }
 
 #pulseaudio {
