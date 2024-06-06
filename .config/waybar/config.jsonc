@@ -18,7 +18,6 @@
         "battery",
         "battery#bat2",
         "pulseaudio",
-	"idle_inhibitor",
         "tray"
     ],
     // Modules configuration
@@ -120,16 +119,6 @@
         "bat": "BAT2"
     },
     
-    "idle_inhibitor": {
-	"format": "{icon}",
-	"format-icons": {
-            "activated": "",
-            "deactivated": ""
-        },
-	"tooltip-format-activated": "Idle inhibitor enabled",
-	"tooltip-format-deactivated": "Idle inhibitor disabled"
-    },
-
     "tray": {
         "icon-size": 17,
 	"spacing": 10
