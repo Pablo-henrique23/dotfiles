@@ -100,9 +100,16 @@ button:hover {
 #idle_inhibitor,
 #scratchpad,
 #power-profiles-daemon,
+#custom-powermenu,
 #mpd {
     padding: 0 10px;
     color: #ffffff;
+}
+
+#custom-powermenu {
+    background-color: transparent;
+    color: @color12;
+
 }
 
 #window,
