@@ -168,7 +168,7 @@ button:hover {
 
 @keyframes blink {
     to {
-        background-color: transparent;
+        /*background-color: transparent;*/
         color: red;
     }
 }
