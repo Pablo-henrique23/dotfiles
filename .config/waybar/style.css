@@ -90,9 +90,9 @@ button:hover {
 #custom-powermenu {
     color: @color12;
     border-radius: 18px;
-    margin-top: 4px;
+    margin-top: 6px;
     margin-left: 8px;
-    margin-bottom: 4px;
+    margin-bottom: 5px;
     padding-right: 12px;
     padding-left: 10px;
     font-weight: bold;
@@ -154,8 +154,7 @@ button:hover {
     margin-left: 8px;
     margin-bottom: 6px;
     padding-left: 10px;
-    padding: 0 10px;
-    padding-right: 10px;
+    padding-right: 16px;
     font-weight: bold;
     transition: none;
     background: black;
