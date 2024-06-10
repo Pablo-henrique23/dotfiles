@@ -214,6 +214,7 @@ label:focus {
 
 #cpu {
     padding-left: 3px;
+    padding-right: 5px;
     background-color: transparent;
     color: @color12;
 }
