@@ -8,11 +8,12 @@
     // Choose the order of the modules
     "modules-left": [
         "custom/powermenu",
-	"hyprland/workspaces",
-	"clock"
+	"hyprland/workspaces"//,
+	//"clock"
     ],
     "modules-center": [
-        "hyprland/window"
+        //"hyprland/window"
+	"clock"
     ],
     "modules-right": [
 	"group/info",
@@ -46,7 +47,7 @@
     "hyprland/window": {
 	"format": "{initialTitle}",
 	"rewrite": {
-		"(.*) Firefox": "󰈹",
+		"(.*) Firefox": "󰈹 ",
         	"(.*) Konsole": "",
 		"Alacritty": "",
 		"kitty": ""
@@ -63,7 +64,7 @@
 	
     "cpu": {
 	"interval": 5,
-        "format": " {usage}%"
+        "format": "   {usage}%"
     },
 
     "memory": {
@@ -87,7 +88,7 @@
     "network": {
         "interval": 5,
 	"format": "{essid}",
-	"format-wifi": "󱚻 {bandwidthTotalBytes}",
+	"format-wifi": "󱚻   {bandwidthTotalBytes}",
 	"format-disconnected": "󰖪",
 	"max-length": 15,
 	"on-click": "nm-applet --indicator",
@@ -114,8 +115,8 @@
         },
         "format": "{capacity}% {icon}",
         "format-full": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
+        "format-charging": "{capacity}% 󰂄",
+        "format-plugged": "{capacity}%",
         "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
