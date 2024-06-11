@@ -106,7 +106,7 @@ button:hover {
     margin-top: 6px;
     margin-left: 8px;
     margin-bottom: 6px;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: bold;
     transition: none;
     background: black;
@@ -301,14 +301,14 @@ label:focus {
 }
 
 #tray {
-    color: @color6;
+    color: @color15;
     border-radius: 18px;
     margin-top: 6px;
     margin-left: 8px;
     padding-left: 10px;
     margin-bottom: 6px;
     padding-right: 10px;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: bold;
     transition: none;
     background: black;
