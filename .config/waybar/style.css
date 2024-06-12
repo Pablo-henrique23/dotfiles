@@ -98,6 +98,9 @@ button:hover {
     font-weight: bold;
     transition: none;
     background: black;
+    border-color: @color11;
+    border-width: 1px;
+    border-style: solid;
 
 }
 #info {
@@ -110,7 +113,9 @@ button:hover {
     font-weight: bold;
     transition: none;
     background: black;
-
+    border-color: @color11;
+    border-width: 1px;
+    border-style: solid;
 }
 
 #window{}
@@ -120,6 +125,9 @@ button:hover {
     background: black;
     padding-right: 6px;
     padding-left: 6px;
+    border-color: @color11;
+    border-width: 1px;
+    border-style: solid;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
@@ -134,6 +142,9 @@ button:hover {
 
 #clock {
     border-radius: 18px;
+    border-color: @color11;
+    border-width: 1px;
+    border-style: solid;
     margin-top: 6px;
     margin-left: 8px;
     padding-left: 10px;
@@ -158,6 +169,9 @@ button:hover {
     font-weight: bold;
     transition: none;
     background: black;
+    border-color: @color11;
+    border-width: 1px;
+    border-style: solid;
 }
 /*
 #battery.charging, #battery.plugged {
@@ -260,11 +274,15 @@ label:focus {
     margin-top: 6px;
     margin-left: 8px;
     margin-bottom: 6px;
+    margin-right: 5px;
     padding-right: 14px;
     padding-left: 10px;
     font-weight: bold;
     transition: none;
     background: black;
+    border-color: @color11;
+    border-width: 1px;
+    border-style: solid;
 }
 
 #wireplumber {
@@ -304,7 +322,6 @@ label:focus {
     color: @color15;
     border-radius: 18px;
     margin-top: 6px;
-    margin-left: 8px;
     padding-left: 10px;
     margin-bottom: 6px;
     padding-right: 10px;
@@ -312,6 +329,9 @@ label:focus {
     font-weight: bold;
     transition: none;
     background: black;
+    border-color: @color11;
+    border-width: 1px;
+    border-style: solid;
 }
 
 #tray > .passive {
