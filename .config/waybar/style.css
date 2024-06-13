@@ -104,6 +104,9 @@ button:hover {
     border-style: solid;
 
 }
+#custom-powermenu:hover{
+    color: white;
+}
 #info {
     padding: 0 10px;
     border-radius: 18px;
