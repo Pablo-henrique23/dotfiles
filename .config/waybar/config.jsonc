@@ -2,7 +2,7 @@
 {
     // "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 25, // Waybar height (to be removed for auto height)
+    "height": 15, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
@@ -56,7 +56,7 @@
     
     "clock": {
 	"interval": 60,
-        "format": "{:%a, %H:%M}",
+        "format": "{:%H:%M - %a, %d %b %Y}",
         "max-length": 25,
 	"tooltip": true,
 	"tooltip-format": "{:%d/%m/%y}"
