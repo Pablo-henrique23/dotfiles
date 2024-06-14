@@ -260,6 +260,7 @@ label:focus {
 }
 
 #network {
+    padding-left: 5px;
     padding-right: 3px;
     background-color: transparent;
     color: @color12;
@@ -313,7 +314,7 @@ label:focus {
 }
 
 #temperature {
-    padding: 0 10px;
+    padding: 0 5px;
     background-color: transparent;
     color: @color12;
 }
