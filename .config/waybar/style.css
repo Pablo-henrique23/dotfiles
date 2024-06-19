@@ -4,14 +4,18 @@
     font-family: sans-serif; /*FontAwesome, Roboto, Helvetica, Arial, sans-serif;*/
     font-size: 13px;
     border: none;
+    min-height: 0px;
 }
 
 window#waybar {
-    background-color: transparent; /*rgba(5, 5, 5, 0.7);
-    border-bottom: 3px solid rgba(0, 0, 0, 0);
-    color: #ffffff;
+    
+    background-color: rgba(10, 10, 10 ,0.95); 
+    color: @foreground;
     transition-property: background-color;
-    transition-duration: .5s;*/
+    transition-duration: .5s;
+    border-radius: 9px;
+    border-width: 1px;
+    border-style: solid;
 }
 
 window#waybar.hidden {
@@ -90,7 +94,7 @@ button:hover {
 
 #custom-powermenu {
     color: @color12;
-    border-radius: 18px;
+    border-radius: 9px;
     margin-top: 6px;
     margin-left: 8px;
     margin-bottom: 5px;
@@ -109,7 +113,7 @@ button:hover {
 }
 #info {
     padding: 0 10px;
-    border-radius: 18px;
+    border-radius: 9px;
     margin-top: 6px;
     margin-left: 8px;
     margin-bottom: 6px;
@@ -125,7 +129,7 @@ button:hover {
 #window{}
 #workspaces {
     margin: 6px 6px 6px 6px;
-    border-radius: 18px;
+    border-radius: 9px;
     background: black;
     padding-right: 6px;
     padding-left: 6px;
@@ -136,16 +140,16 @@ button:hover {
 
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left > widget:first-child > #custom-powermenu {
-    margin-left: 5;
+    margin-left: 5px;
 }
 
 /* If workspaces is the rightmost module, omit right margin */
 .modules-right > widget:last-child > #tray {
-    margin-right: 5;
+    margin-right: 5px;
 }
 
 #clock {
-    border-radius: 18px;
+    border-radius: 9px;
     border-color: @color11;
     border-width: 1px;
     border-style: solid;
@@ -154,7 +158,7 @@ button:hover {
     padding-left: 10px;
     margin-bottom: 6px;
     padding-right: 10px;
-    font-size: 14px;
+    font-size: 12px;
     transition: none;
     color: @background;
     background: @color8;
@@ -164,7 +168,7 @@ button:hover {
 #battery.charging,
 #battery.plugged {
     color: @color15;
-    border-radius: 18px;
+    border-radius: 9px;
     margin-top: 6px;
     margin-left: 8px;
     margin-bottom: 6px;
@@ -193,7 +197,7 @@ button:hover {
 
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
-    border-radius: 18px;
+    border-radius: 9px;
     margin-top: 6px;
     margin-left: 8px;
     margin-bottom: 6px;
@@ -275,7 +279,7 @@ label:focus {
 #pulseaudio.muted,
 #pulseaudio:hover {
     color: @color15;
-    border-radius: 18px;
+    border-radius: 9px;
     margin-top: 6px;
     margin-left: 8px;
     margin-bottom: 6px;
@@ -325,7 +329,7 @@ label:focus {
 
 #tray {
     color: @color15;
-    border-radius: 18px;
+    border-radius: 9px;
     margin-top: 6px;
     padding-left: 10px;
     margin-bottom: 6px;
