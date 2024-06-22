@@ -22,7 +22,7 @@
 
 
 # Set some variables
-wall_dir="${HOME}/Imagens/Wallpapers/OneMonitor/"
+wall_dir="${HOME}/dotfiles/Imagens/Wallpapers/OneMonitor/"
 cacheDir="${HOME}/.cache/jp/${theme}"
 rofi_command="rofi -x11 -dmenu -theme ${HOME}/dotfiles/.config/rofi/config.rasi -theme-str ${rofi_override}"
 
