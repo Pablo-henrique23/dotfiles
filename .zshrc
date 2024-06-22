@@ -261,6 +261,6 @@ if [ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]; th
 fi
 
 
-#neofetch
+fastfetch
 
 # End of lines added by compinstall
