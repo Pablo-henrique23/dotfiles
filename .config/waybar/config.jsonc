@@ -6,6 +6,9 @@
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
+    "margin-top": 5,
+    "margin-left": 5,
+    "margin-right": 5,
     "modules-left": [
         "custom/powermenu",
 	"hyprland/workspaces"//,
