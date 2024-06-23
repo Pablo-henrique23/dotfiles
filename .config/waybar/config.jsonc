@@ -11,7 +11,8 @@
     "margin-right": 5,
     "modules-left": [
         "custom/powermenu",
-	"hyprland/workspaces"//,
+	"hyprland/workspaces"
+	//"hyprland/window"
 	//"clock"
     ],
     "modules-center": [
@@ -48,7 +49,7 @@
     },
     
     "hyprland/window": {
-	"format": "{title}",
+	"format": "{initialTitle}",
 	"rewrite": {
 		"(.*) Firefox": "󰈹 ",
         	"(.*) Konsole": "",
@@ -59,7 +60,7 @@
     
     "clock": {
 	"interval": 60,
-        "format": "{:%I:%M %p - %a, %d %b %Y}",
+        "format": "{:%H:%M | %a, %b %d}",
         "max-length": 25,
 	"tooltip": true,
 	"tooltip-format": "{:%A, %d/%m/%y}"
