@@ -2,3 +2,4 @@ LEMBRETES:
 
 passar wallpapers da pasta de OneMonitor para png
 temas do hyprcursor (discord hyprland, check docs)
+trocar tema do zsh
