@@ -11,6 +11,7 @@
     "margin-right": 5,
     "modules-left": [
         "custom/powermenu",
+	"custom/whatsapp",
 	"hyprland/workspaces"
 	//"hyprland/window"
 	//"clock"
@@ -32,6 +33,14 @@
     	"on-click": "~/dotfiles/.config/rofi/powermenu/type-2/powermenu.sh",
     	"tooltip": true,
 	"tooltip-format": "powermenu"
+    },
+    "custom/whatsapp": {
+    	"format": "󰖣",
+	"tooltip": true,
+	"tooltip-format": "Whatsapp",
+	"on-click": "whatsdesk"
+
+    
     },
      "hyprland/workspaces": {
          "disable-scroll": true,
@@ -60,7 +69,7 @@
     
     "clock": {
 	"interval": 60,
-        "format": "{:%H:%M | %a, %b %d}",
+        "format": "{:%b %d  %H:%M}",
         "max-length": 25,
 	"tooltip": true,
 	"tooltip-format": "{:%A, %d/%m/%y}"
@@ -117,6 +126,7 @@
             "warning": 30,
             "critical": 15
         },
+	"design-capacity": true,
         "format": "{capacity}% {icon}",
         "format-full": "{capacity}% {icon}",
         "format-charging": "{capacity}% 󰂄",
