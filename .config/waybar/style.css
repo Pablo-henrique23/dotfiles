@@ -94,7 +94,7 @@ button:hover {
 
 #custom-powermenu {
     color: @color12;
-    border-radius: 9px;
+    border-radius: 7px;
     margin-top: 5px;
     margin-left: 5px;
     margin-bottom: 5px;
@@ -113,7 +113,7 @@ button:hover {
 }
 #info {
     padding: 0 10px;
-    border-radius: 9px;
+    border-radius: 7px;
     margin-top: 5px;
     margin-left: 8px;
     margin-bottom: 5px;
@@ -129,7 +129,7 @@ button:hover {
 #window{}
 #workspaces {
     margin: 4px 4px 4px 4px;
-    border-radius: 9px;
+    border-radius: 7px;
     background: black;
     padding-right: 6px;
     padding-left: 6px;
@@ -149,7 +149,7 @@ button:hover {
 }
 
 #clock {
-    border-radius: 9px;
+    border-radius: 7px;
     border-color: @color11;
     border-width: 1px;
     border-style: solid;
@@ -160,14 +160,14 @@ button:hover {
     padding-right: 10px;
     transition: none;
     color: @background;
-    background: @color8;
+    background: @color12;
 }
 
 #battery,
 #battery.charging,
 #battery.plugged {
     color: @color15;
-    border-radius: 9px;
+    border-radius: 7px;
     margin-top: 5px;
     margin-left: 0px;
     margin-bottom: 5px;
@@ -196,7 +196,7 @@ button:hover {
 
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
-    border-radius: 9px;
+    border-radius: 7px;
     margin-top: 5px;
     margin-left: 8px;
     margin-bottom: 5px;
@@ -278,7 +278,7 @@ label:focus {
 #pulseaudio.muted,
 #pulseaudio:hover {
     color: @color15;
-    border-radius: 9px;
+    border-radius: 7px;
     margin-top: 5px;
     margin-left: 0px;
     margin-bottom: 5px;
@@ -328,7 +328,7 @@ label:focus {
 
 #tray {
     color: @color15;
-    border-radius: 9px;
+    border-radius: 7px;
     margin-top: 5px;
     margin-left: 0px;
     padding-right: 10px;
