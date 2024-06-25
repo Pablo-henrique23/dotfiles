@@ -11,8 +11,8 @@
     "margin-right": 5,
     "modules-left": [
         "custom/powermenu",
-	"custom/whatsapp",
-	"hyprland/workspaces"
+	"hyprland/workspaces",
+	"custom/whatsapp"
 	//"hyprland/window"
 	//"clock"
     ],
