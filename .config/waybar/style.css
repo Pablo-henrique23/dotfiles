@@ -172,7 +172,7 @@ button:hover {
     transition: none;
     color: @color12;
     font-size: 13;
-    background: @background;
+    background: black;/*@background;*/
     font-weight: bold;
     margin: 4px 4px 4px 4px;
 }
