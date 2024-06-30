@@ -106,7 +106,8 @@
 	"max-length": 15,
 	"on-click": "nm-applet --indicator",
 	"on-click-right": "killall nm-applet",
-	"tooltip-format": "{ipaddr}/{essid}"
+	"tooltip-format": "{ipaddr}/{essid}",
+	"tooltip-format-disconnected": "Desconectado"
 
     },
 

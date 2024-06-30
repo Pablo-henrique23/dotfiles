@@ -17,6 +17,7 @@
 		// 	}
 	},
 	"modules": [
+		"title",
 		{
 			"type": "os",
 			"key": "󰣇",
