@@ -69,7 +69,7 @@
     
     "clock": {
 	"interval": 60,
-        "format": "{:%b %d  %H:%M}",
+        "format": "{:%b %d, %H:%M}",
         "max-length": 25,
 	"tooltip": true,
 	"tooltip-format": "{:%A, %d/%m/%y}"
