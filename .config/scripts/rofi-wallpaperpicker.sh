@@ -61,7 +61,7 @@ swww img "${wall_dir}/${wall_selection}" --transition-step 30 --transition-fps 6
 # Troca o tema de tudo
 wal -i "${wall_dir}/${wall_selection}"
 cp ~/.cache/wal/colors-waybar.css ~/dotfiles/.config/waybar/
-~/dotfiles/.config/waybar/scripts/reloadWaybar.sh
+~/dotfiles/.config/scripts/reloadWaybar.sh
 
 exit 0
 
