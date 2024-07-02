@@ -6,19 +6,17 @@
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "margin-top": 5,
-    "margin-left": 5,
-    "margin-right": 5,
+    "margin-top": 0,
+    "margin-left": 0,
+    "margin-right": 0,
     "modules-left": [
         "custom/powermenu",
 	"hyprland/workspaces",
 	"custom/whatsapp"
-	//"hyprland/window"
-	//"clock"
+//	"hyprland/window"
     ],
     "modules-center": [
-//        "hyprland/window",
-	"clock"
+        "clock"
     ],
     "modules-right": [
 	"group/info",
@@ -47,11 +45,6 @@
          "all-outputs": true,
          "warp-on-scroll": false,
          "format": "{id}",
-         "format-icons": {
-             "urgent": "",
-             "active": "",
-             "default": ""
-         },
 	 "persistent-workspaces":{
 		 "*": 3
 	}
@@ -59,12 +52,12 @@
     
     "hyprland/window": {
 	"format": "{initialTitle}",
-	"rewrite": {
+	/*"rewrite": {
 		"(.*) Firefox": "󰈹 ",
         	"(.*) Konsole": "",
 		"Alacritty": "",
 		"kitty": ""
-    	}	
+    	}*/	
     },
     
     "clock": {
