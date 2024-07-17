@@ -338,8 +338,8 @@ label:focus {
     padding-right: 10px;
     padding-left: 10px;
     margin-bottom: 5px;
-    /*font-size: 12px;*/
-    font-weight: bold;
+    /*font-size: 12px;
+    font-weight: bold;*/
     transition: none;
     background: black;
 }
