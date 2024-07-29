@@ -11,8 +11,8 @@
     "margin-right": 0,
     "modules-left": [
         "custom/powermenu",
-	"hyprland/workspaces",
-	"custom/whatsapp"
+	"hyprland/workspaces"
+	//"custom/whatsapp"
 	//"hyprland/window"
 	//"clock"
     ],
@@ -21,7 +21,11 @@
 	"clock"
     ],
     "modules-right": [
-	"group/info",
+	//group/info",
+	"cpu",
+	"memory",
+	"temperature",
+	"network",
         "battery",
         "battery#bat2",
         "pulseaudio",
@@ -29,7 +33,7 @@
     ],
     // Modules configuration
     "custom/powermenu": {
-	"format": "⏻",
+	"format":"⏻",
     	"on-click": "~/dotfiles/.config/rofi/powermenu/type-2/powermenu.sh",
     	"tooltip": true,
 	"tooltip-format": "powermenu"
@@ -44,7 +48,7 @@
     },
      "hyprland/workspaces": {
          "disable-scroll": true,
-         "all-outputs": true,
+	 "all-outputs": true,
          "warp-on-scroll": false,
          "format": "{id}",
          "format-icons": {
@@ -96,7 +100,7 @@
 
     "memory": {
        "interval": 5,
-       "format": "{percentage}%", 
+       "format": "  {percentage}%",
        "tooltip-format": "memory usage"
     },
 
@@ -108,7 +112,7 @@
     },
     
     "temperature": {
-       "format": " {temperatureC}°C",
+       "format": "  {temperatureC}°C",
        "tooltip-format": "temperature"
     },
     
