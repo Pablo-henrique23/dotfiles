@@ -71,7 +71,7 @@ button:hover {
 #workspaces button {
     padding: 0 5px;
     margin: 0 2px;
-    background-color: black;
+    background-color: transparent;
     color: @color6;
     font-weight: bold;
 
