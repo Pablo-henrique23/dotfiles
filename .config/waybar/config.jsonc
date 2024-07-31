@@ -11,9 +11,9 @@
     "margin-right": 0,
     "modules-left": [
         "custom/powermenu",
-	"hyprland/workspaces"
+	"hyprland/workspaces",
 	//"custom/whatsapp"
-	//"hyprland/window"
+	"hyprland/window"
 	//"clock"
     ],
     "modules-center": [
@@ -62,7 +62,7 @@
     },
     
     "hyprland/window": {
-	"format": "{initialTitle}",
+	"format": "{title}", //initialTitle
 	"rewrite": {
 		"(.*) Firefox": "󰈹 ",
         	"(.*) Konsole": "",

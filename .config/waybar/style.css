@@ -18,10 +18,11 @@ window#waybar.hidden {
     opacity: 0.2;
 }
 
-/*
-window#waybar.empty {
+
+window#waybar.empty #window{
     background-color: transparent;
 }
+/*
 window#waybar.solo {
     background-color: #FFFFFF;
 }
@@ -150,7 +151,13 @@ button:hover {
     background: black;
 }
 
-#window{}
+#window{
+    border-radius: 6px;
+    background-color: @color15;
+    color: black;
+    margin: 4px 2px 4px 2px;
+    padding: 0px 10px; 
+}
 #workspaces {
     margin: 4px 2px 4px 2px;
     background: transparent;
