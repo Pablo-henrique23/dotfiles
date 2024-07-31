@@ -141,14 +141,13 @@ button:hover {
     color: white;
 }
 #info {
-    padding: 0 10px;
-    margin-top: 5px;
-    margin-left: 8px;
-    margin-bottom: 5px;
+    padding: 0px 5px;
+    margin-top: 4px;
+    margin-left: 0px;
+    margin-bottom: 4px;
     font-weight: bold;
-    /*font-size: 10px;*/
-    transition: none;
-    background: black;
+    font-size: 10px;
+    background: @color14;
 }
 
 #window{
@@ -196,7 +195,7 @@ button:hover {
     color: black; /*@color15;*/
     margin-top: 4px;
     margin-left: 0px;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
     padding-left: 10px;
     padding-right: 10px;
     /*font-weight: bold;*/
@@ -256,16 +255,17 @@ label:focus {
 #cpu {
     padding-left: 3px;
     padding-right: 5px;
-    background-color: @color12;
+/*    background-color: @color12;
+    margin: 4px 2px 4px 2px*/
     color: black;
-    margin: 4px 2px 4px 2px;
 }
 
 #memory {
     padding: 0 3px;
     background-color: @color14;
     color: black;
-    margin: 4px 2px 4px 2px;    
+/*    margin: 4px 2px 4px 2px;*/
+    font-weight: bold;
 }
 
 #disk {
@@ -277,7 +277,7 @@ label:focus {
 #custom-separator {
    padding: 0 2px;
    background-color: transparent;
-   color: @color12;   
+   color: black;   
 }
 
 #backlight {
@@ -291,7 +291,7 @@ label:focus {
     margin-right: 2px;
     padding-left: 5px;
     padding-right: 3px;
-    background-color: @color3;
+    background-color: @color15;
     color: black;
 }
 
@@ -304,9 +304,9 @@ label:focus {
 #pulseaudio.muted,
 #pulseaudio:hover {
     color: black; /*@color15;*/
-    margin-top: 5px;
+    margin-top: 4px;
     margin-left: 0px;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
     margin-right: 5px;
     padding-right: 14px;
     padding-left: 10px;
@@ -340,9 +340,9 @@ label:focus {
 
 #temperature {
     padding: 0 5px;
-    background-color: @color9;
+/*    background-color: @color9;*/
+/*    margin: 4px 2px 4px 2px;*/
     color: black;
-    margin: 4px 2px 4px 2px;
 }
 
 #temperature.critical {
@@ -351,15 +351,15 @@ label:focus {
 
 #tray {
     color: black;
-    margin-top: 5px;
+    margin-top: 4px;
     margin-left: 0px;
     padding-right: 10px;
     padding-left: 10px;
-    margin-bottom: 5px;
-    /*font-size: 12px;
-    font-weight: bold;*/
+    margin-bottom: 4px;
+    /*font-size: 12px;*/
+    font-weight: bold;
     transition: none;
-    background: transparent;
+    background: @color11;
 }
 
 #tray > .passive {

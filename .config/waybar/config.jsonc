@@ -21,10 +21,10 @@
 	"clock"
     ],
     "modules-right": [
-	//group/info",
-	"cpu",
-	"memory",
-	"temperature",
+	"group/info",
+	//"cpu",
+	//"memory",
+	//"temperature",
 	"network",
         "battery",
         "battery#bat2",
@@ -120,7 +120,7 @@
         "interval": 5,
 	"format": "{essid}",
 	"format-wifi": "󱚻   {bandwidthTotalBytes}",
-	"format-disconnected": "󰖪",
+	"format-disconnected": "󰖪 ",
 	"max-length": 15,
 	"on-click": "nm-applet --indicator",
 	"on-click-right": "killall nm-applet",
@@ -131,7 +131,7 @@
 
     "group/info": {
 	"orientation": "horizontal",
-	"modules": ["cpu", "memory", "disk", "custom/separator", "temperature", "custom/separator", "network"]
+	"modules": ["cpu", "custom/separator","memory", "custom/separator", "temperature"]
     },
 	
     "custom/separator": {
@@ -161,7 +161,7 @@
     },
     
     "tray": {
-        "icon-size": 17,
+        "icon-size": 16,
 	"spacing": 10
     },
 
