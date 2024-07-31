@@ -33,7 +33,7 @@
     ],
     // Modules configuration
     "custom/powermenu": {
-	"format":"⏻",
+	"format":"",//"⏻",
     	"on-click": "~/dotfiles/.config/rofi/powermenu/type-2/powermenu.sh",
     	"tooltip": true,
 	"tooltip-format": "powermenu"
@@ -112,7 +112,7 @@
     },
     
     "temperature": {
-       "format": "  {temperatureC}°C",
+       "format": " {temperatureC}°C",
        "tooltip-format": "temperature"
     },
     

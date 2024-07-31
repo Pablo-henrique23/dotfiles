@@ -343,7 +343,7 @@ label:focus {
 }
 
 #tray {
-    color: @color15;
+    color: black;
     margin-top: 5px;
     margin-left: 0px;
     padding-right: 10px;
@@ -352,7 +352,7 @@ label:focus {
     /*font-size: 12px;
     font-weight: bold;*/
     transition: none;
-    background: black;
+    background: transparent;
 }
 
 #tray > .passive {
