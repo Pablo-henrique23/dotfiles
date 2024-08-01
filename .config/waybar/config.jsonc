@@ -62,12 +62,12 @@
     },
     
     "hyprland/window": {
-	"format": "{title}", //initialTitle
+	"format": "{initialTitle}",
 	"rewrite": {
 		"(.*) Firefox": "󰈹 ",
         	"(.*) Konsole": "",
-		"Alacritty": "",
-		"kitty": ""
+		"Alacritty": "$1",
+		"kitty": ""	
     	}	
     },
     
