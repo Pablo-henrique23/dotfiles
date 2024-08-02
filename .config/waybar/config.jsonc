@@ -66,6 +66,7 @@
 	"rewrite": {
 		"(.*) Firefox": "󰈹 ",
         	"(.*) Konsole": "",
+		"whatsdesk":"",
 		"Alacritty": "$1",
 		"kitty": ""	
     	}	
