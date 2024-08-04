@@ -10,7 +10,7 @@ source ~/.cache/wal/colors.sh
 cp ~/.cache/wal/colors-waybar.css ~/dotfiles/.config/waybar/colors-waybar.css
 
 # Limpa o cache e troca o wallpaper
-swww clear-cache; swww img $wallpaper --transition-step 30 --transition-fps 60 -t random
+swww clear-cache; swww img $wallpaper --transition-step 15 --transition-fps 30
 
 # Recarrega a waybar
 ~/dotfiles/.config/scripts/reloadWaybar.sh
