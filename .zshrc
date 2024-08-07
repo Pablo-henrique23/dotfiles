@@ -1,4 +1,5 @@
 wal -R > /dev/null
+figlet -k $XDG_CURRENT_DESKTOP; echo
 #fastfetch; echo
 
 # If you come from bash you might have to change your $PATH.

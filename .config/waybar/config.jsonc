@@ -64,11 +64,12 @@
     "hyprland/window": {
 	"format": "{initialTitle}",
 	"rewrite": {
-		"(.*) Firefox": "󰈹 ",
+		"(.*) Firefox": "󰈹",
         	"(.*) Konsole": "",
+		"Alacritty": "",
+		"kitty": "",
 		"whatsdesk":"",
-		"Alacritty": "$1",
-		"kitty": ""	
+		"Visual Studio Code":"󰨞"
     	}	
     },
     
@@ -149,8 +150,8 @@
 	"design-capacity": true,
         "format": "{capacity}% {icon}",
         "format-full": "{capacity}% {icon}",
-        "format-charging": "{capacity}% 󰂄",
-        "format-plugged": "{capacity}%",
+        "format-charging": "{capacity}% 󱐥", //󰂄",
+        "format-plugged": "{capacity}% 󱐥",
         "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
