@@ -1,7 +1,7 @@
-wal -R > /dev/null
-figlet -k $XDG_CURRENT_DESKTOP; echo
+#wal -R > /dev/null
+#figlet -k $XDG_CURRENT_DESKTOP; echo
 #fastfetch; echo
-
+pokemon-colorscripts -r --no-title
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 

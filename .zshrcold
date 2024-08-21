@@ -1,7 +1,7 @@
 # Lines configured by zsh-newuser-install
 
-(cat ~/.cache/wal/sequences &)
-source ~/.cache/wal/colors-tty.sh
+#(cat ~/.cache/wal/sequences &)
+#source ~/.cache/wal/colors-tty.sh
 
 HISTFILE=~/.zsh_history
 HISTSIZE=1000
