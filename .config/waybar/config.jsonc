@@ -52,7 +52,8 @@
          "warp-on-scroll": false,
          "format": "{icon}",
          "format-icons": {
-             "urgent": "",
+   //          "urgent": "",
+   	     "urgent":"!",
 	     "1":"I",
 	     "2":"II",
 	     "3":"III",
@@ -75,7 +76,7 @@
              "20":"XX"
          },
 	 "persistent-workspaces":{
-		 "*": 3
+		 "*": 5
 	}
     },
     
