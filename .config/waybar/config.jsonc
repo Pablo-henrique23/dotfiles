@@ -93,6 +93,7 @@
     },
     
     "clock": {
+	"timezone": "America/Sao_Paulo",
 	"interval": 60,
         "format": "   {:%b %d, %H:%M}",
         "max-length": 25,
