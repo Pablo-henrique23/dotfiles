@@ -1,7 +1,7 @@
 # Lines configured by zsh-newuser-install
 
-(cat ~/.cache/wal/sequences &)
-source ~/.cache/wal/colors-tty.sh
+#(cat ~/.cache/wal/sequences &)
+#source ~/.cache/wal/colors-tty.sh
 
 HISTFILE=~/.zsh_history
 HISTSIZE=1000
@@ -127,9 +127,9 @@ else
     HOST=$'%F{cyan}'$USER'%F{yellow}@'
 fi
 
-
+HOSTNAME=$(hostname)
 DIR=$'%B%F{yellow}%(6~.%-1~/…/%4~.%5~)%b%F{green}'
-NAME=$'%F{magenta}  $HOST%F{blue}Arch%F{reset}%f' # CHANGE ME
+NAME=$'%F{magenta}  '$HOST'%F{blue}'$HOSTNAME'%F{reset}%f' # CHANGE ME
 ICON='%F{blue}󰣇' # CHANGE ME
 
 #pokemon-colorscripts -r --no-title
