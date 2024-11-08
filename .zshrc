@@ -134,4 +134,4 @@ if [ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]; th
     # change suggestion color
     ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#999'
 fi
-export PATH=$PATH:/home/pablo/.local/bin:/usr/local/NVIDIA-Nsight-Compute
+export PATH=$PATH:/home/pablo/.local/bin:/usr/local/NVIDIA-Nsight-Compute:/opt/lampp/bin
