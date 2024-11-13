@@ -134,4 +134,8 @@ if [ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]; th
     # change suggestion color
     ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#999'
 fi
+
+export FZF_CTRL_T_COMMAND='ag --hidden --ignore .git --ignore node_modules --ignore Library -g ""'
+
 export PATH=$PATH:/home/pablo/.local/bin:/usr/local/NVIDIA-Nsight-Compute:/opt/lampp/bin
+#export NODE_OPTIONS=--openssl-legacy-provider
