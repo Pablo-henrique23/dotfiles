@@ -139,3 +139,4 @@ export FZF_CTRL_T_COMMAND='ag --hidden --ignore .git --ignore node_modules --ign
 
 export PATH=$PATH:/home/pablo/.local/bin:/usr/local/NVIDIA-Nsight-Compute:/opt/lampp/bin
 #export NODE_OPTIONS=--openssl-legacy-provider
+source /usr/share/nvm/init-nvm.sh
