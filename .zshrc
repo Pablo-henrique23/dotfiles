@@ -1,3 +1,4 @@
+#source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 #wal -R > /dev/null
 #figlet -k $XDG_CURRENT_DESKTOP; echo
 #fastfetch; echo
