@@ -13,6 +13,7 @@ bindkey -e
 zstyle :compinstall filename '/home/pablo/.zshrc'
 
 autoload -Uz compinit
+autoload -Uz add-zsh-hook
 compinit
 # Lines configured by zsh-newuser-install
 setopt hist_expire_dups_first # delete duplicates first when HISTFILE size exceeds HISTSIZE
@@ -23,7 +24,6 @@ setopt hist_verify            # show command with history expansion to user befo
 
 # force zsh to show the complete history
 alias history="history 0"
-
 
 setopt autocd              # change directory just by typing its name
 setopt correct            # auto correct mistakes
@@ -134,16 +134,49 @@ ICON='%F{blue}󰣇' # CHANGE ME
 
 #pokemon-colorscripts -r --no-title
 #fastfetch
+
+# git
+
+# setopt PROMPT_SUBST
+# autoload -Uz vcs_info
+
+setopt PROMPT_SUBST
+# PROMPT='%B%F{magenta}%n '$'\U2740'' %f %F{blue}%~%f ${vcs_info_msg_0_}%b%F{blue}'$'\U2771''%f '
+# PROMPT='%B%F{magenta}%n %F{blue}%~ ${vcs_info_msg_0_}%F{blue}%F{183}»%f%b '
+precmd() {
+
+    # Print the previously configured title
+    print -Pnr -- "$TERM_TITLE"
+
+    # Print a new line before the prompt, but only if it is not the first line
+    if [ "$new_line_before_prompt" = yes ]; then
+        if [ -z "$_NEW_LINE_BEFORE_PROMPT" ]; then
+            _NEW_LINE_BEFORE_PROMPT=1
+        else
+            print ""
+        fi
+    fi
+}
+autoload -Uz vcs_info
+
+precmd() {
+    vcs_info
+}
+
+zstyle ':vcs_info:git:*' formats $'\n├──🮤%F{red} %F{cyan}%b%F{green}%a🮥'
+# zstyle ':vcs_info:*' check-for-changes true 
+
 if [ "$color_prompt" = yes ]; then
 
-        # Assemble the prompt in pieces for readability
-        LINE1=$'%F{green}┌──🮤'$NAME'%F{green}🮥'$LOCAL$VPN$WIFI
-        LINE2=$'\n├──🮤%F{yellow}  '$DIR'🮥'
-        LINE3=$'\n└─%B$ICON %F{reset}%b'
+    # Assemble the prompt in pieces for readability
+    LINE1=$'%F{green}┌──🮤'$NAME'%F{green}🮥$LOCAL$VPN$WIFI'
+    LINE2='${vcs_info_msg_0_}'
+    LINE3=$'\n├──🮤%F{yellow}  '$DIR'🮥'
+    LINE4=$'\n└─%B$ICON %F{reset}%b'
 
-        TIME=$'%t'
+    TIME=$'%t'
 
-    PROMPT=$LINE1$LINE2$LINE3
+    PROMPT=$LINE1$LINE2$LINE3$LINE4
     RPROMPT=$'%F{green}[%F{reset}'$TIME'%(?.. %? %F{red}%B⨯%b%F{reset})%(1j. %j %F{yellow}%B⚙%b%F{reset}.)%F{green} ]'
 
     # enable syntax-highlighting
@@ -207,19 +240,7 @@ xterm*|rxvt*)
 esac
 
 new_line_before_prompt=no # yes CHANGE ME
-precmd() {
-    # Print the previously configured title
-    print -Pnr -- "$TERM_TITLE"
 
-    # Print a new line before the prompt, but only if it is not the first line
-    if [ "$new_line_before_prompt" = yes ]; then
-        if [ -z "$_NEW_LINE_BEFORE_PROMPT" ]; then
-            _NEW_LINE_BEFORE_PROMPT=1
-        else
-            print ""
-        fi
-    fi
-}
 
 # enable color support of ls, less and man, and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
