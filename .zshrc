@@ -133,7 +133,7 @@ NAME=$'%F{magenta}  '$HOST'%F{blue}'$HOSTNAME'%F{reset}%f' # CHANGE ME
 ICON='%F{blue}󰣇' # CHANGE ME
 
 #pokemon-colorscripts -r --no-title
-#fastfetch
+fastfetch
 
 # git
 
@@ -281,7 +281,5 @@ if [ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]; th
     ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#999'
 fi
 
-
-fastfetch
 
 # End of lines added by compinstall
