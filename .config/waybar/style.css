@@ -6,9 +6,6 @@
     border: none;
     min-height: 0px;
 }
-/*
-#window {
-    margin-left: 5px;
 
 window#waybar {    
     background-color: rgba(10, 10, 10, 0.5); 
@@ -103,7 +100,6 @@ button:hover {
 #workspaces button.urgent {
     background-color: #eb4d4b;
 }
-
 
 #mode {
     background-color: #64727D;

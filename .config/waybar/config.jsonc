@@ -17,7 +17,8 @@
 	//"clock"
     ],
     "modules-center": [
-        "clock"
+//        "hyprland/window",
+	"clock"
     ],
     "modules-right": [
 	"group/info",
