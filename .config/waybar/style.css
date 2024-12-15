@@ -1,8 +1,8 @@
 @import 'colors-waybar.css';
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: sans-serif; /*FontAwesome, Roboto, Helvetica, Arial, sans-serif;*/
-    font-size: 11px;
+    font-family: sans-serif, Roboto;
+    font-size: 10px;
     border: none;
     min-height: 0px;
 }
@@ -10,22 +10,19 @@
 #window {
     margin-left: 5px;
 
-}*/
 window#waybar {    
-    background-color: rgba(10, 10, 10, 0.8);
+    background-color: rgba(10, 10, 10, 0.5); 
     color: @foreground;
     transition-property: background-color;
     transition-duration: .5s;
-/*    border-radius: 9px;
-    border-width: 1px;
-    border-style: solid;*/
 }
 
 window#waybar.hidden {
     opacity: 0.2;
 }
 
-window#waybar.empty {
+
+window#waybar.empty #window{
     background-color: transparent;
 }
 /*
@@ -45,15 +42,19 @@ window#waybar.chromium {
 
 #custom-powermenu,
 #custom-whatsapp,
+#cpu,
+#memory,
+#temperature,
 #clock,
 #info,
+#network,
 #battery,
 #pulseaudio,
 #tray {
     border-radius: 6px;
 /*    border-color: @color11;
-    border-width: 1.5px;*/
-    border-style: solid;
+    border-width: 1.5px;
+    border-style: solid;*/
 }
 
 button {
@@ -61,34 +62,37 @@ button {
     box-shadow: inset 0 -3px transparent;
     /* Avoid rounded borders under each button name */
     border: none;
-    border-radius: 0;
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 button:hover {
     background: inherit;
-    box-shadow: inset 0 -3px #ffffff;
+    box-shadow: inset 0 -2px #ffffff;
 }
 
 /* you can set a style on hover for any module like this */
 
 #workspaces button {
     padding: 0 5px;
+    margin: 0 2px;
     background-color: transparent;
-    color: @color12;
+    color: @color6;
+    font-weight: bold;
+
 }
 
 #workspaces button:hover {
-    background: rgba(0, 0, 0, 0.2);
+    background: @color6; /*rgba(0, 0, 0, 0.2);*/
 /*    background-color: @color10;*/
-    box-shadow: inset 0 -2px @color15;
+/*    box-shadow: inset 0 -1px white;*/
+    color: black;
 }
 
 #workspaces button.active {
 /*    box-shadow: inset 0 -2px @color15;*/
     border-radius: 4px;
-    background-color: @color12;
     color: black;
+    background-color: @color6;
 }
 
 #workspaces button.focused {
@@ -112,7 +116,7 @@ button:hover {
 }
 
 #custom-powermenu {
-    color: @color12;
+    color: black; /*@color12;*/
     margin-top: 4px;
     margin-left: 5px;
     margin-bottom: 4px;
@@ -120,7 +124,7 @@ button:hover {
     padding-left: 10px;
     font-weight: bold;
     transition: none;
-    background: black;
+    background: @color11;
 
 }
 #custom-powermenu:hover{
@@ -141,23 +145,29 @@ button:hover {
     color: white;
 }
 #info {
-    padding: 0 10px;
-    margin-top: 5px;
-    margin-left: 8px;
-    margin-bottom: 5px;
+    padding: 0px 5px;
+    margin-top: 4px;
+    margin-left: 0px;
+    margin-bottom: 4px;
     font-weight: bold;
-    /*font-size: 10px;*/
-    transition: none;
-    background: black;
+    font-size: 10px;
+    background: @color14;
 }
 
-#window{}
+#window{
+    border-radius: 6px;
+    background-color: @color15;
+    color: black;
+    margin: 4px 2px 4px 2px;
+    padding: 0px 12px 0px 8px;
+}
 #workspaces {
-    margin: 4px 0px 4px 0px;
-    background: black;
+    margin: 4px 2px 4px 2px;
+    background: transparent;
     padding-right: 0px;
     padding-left: 0px;
     border-radius: 4px;
+   
 }
 
 /* If workspaces is the leftmost module, omit left margin */
@@ -176,24 +186,27 @@ button:hover {
     padding-right: 10px;
     padding-bottom: 2px;
     transition: none;
-    color: @color12;
-    background: black;/*@background;*/
-    font-weight: bold;
-    margin: 4px 4px 4px 4px;
+    color:black;/* @color12;*/
+    background: @color15; /*black;@background;*/
+    font-weight: bold; 
+    margin: 4px 2px 4px 2px;
 }
 
 #battery,
 #battery.charging,
-#battery.plugged {
-    color: @color15;
-    margin-top: 5px;
+#battery.plugged,
+#battery.critical:not(.charging){
+    color: black; /*@color15;*/
+    margin-top: 4px;
     margin-left: 0px;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
     padding-left: 10px;
-    padding-right: 15px;
-    font-weight: bold;
+    padding-right: 10px;
+    /*font-weight: bold;*/
     transition: none;
-    background: black;
+   /* background: black;*/
+    background: #32a852;
+    background: @color8;
 }
 /*
 #battery.charging, #battery.plugged {
@@ -210,13 +223,9 @@ button:hover {
 }
 
 /* Using steps() instead of linear as a timing function to limit cpu usage */
-#battery.critical:not(.charging) {
-    margin-top: 5px;
-    margin-left: 0px;
-    margin-bottom: 5px;
+#battery.critical:not(.charging) { 
     font-weight: bold;
-    background: black;
-    color: @color15;
+    color: black;/*@color15;*/
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: steps(12);
@@ -250,14 +259,17 @@ label:focus {
 #cpu {
     padding-left: 3px;
     padding-right: 5px;
-    background-color: transparent;
-    color: @color12;
+/*    background-color: @color12;
+    margin: 4px 2px 4px 2px*/
+    color: black;
 }
 
 #memory {
     padding: 0 3px;
-    background-color: transparent;
-    color: @color12;
+    background-color: @color14;
+    color: black;
+/*    margin: 4px 2px 4px 2px;*/
+    font-weight: bold;
 }
 
 #disk {
@@ -269,7 +281,7 @@ label:focus {
 #custom-separator {
    padding: 0 2px;
    background-color: transparent;
-   color: @color12;   
+   color: black;   
 }
 
 #backlight {
@@ -277,30 +289,34 @@ label:focus {
 }
 
 #network {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    margin-left: 2px;
+    margin-right: 2px;
     padding-left: 5px;
     padding-right: 3px;
-    background-color: transparent;
-    color: @color12;
+    background-color: @color15;
+    color: black;
 }
 
 #network.disconnected {
-    background-color: transparent;
-    color: @color12;
+    background-color: @color3;
+    color: black;
 }
 
 #pulseaudio,
 #pulseaudio.muted,
 #pulseaudio:hover {
-    color: @color15;
-    margin-top: 5px;
+    color: black; /*@color15;*/
+    margin-top: 4px;
     margin-left: 0px;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
     margin-right: 5px;
     padding-right: 14px;
     padding-left: 10px;
-    font-weight: bold;
+    /*font-weight: bold;*/
     transition: none;
-    background: black;
+    background: @color2;
 }
 
 #wireplumber {
@@ -328,8 +344,9 @@ label:focus {
 
 #temperature {
     padding: 0 5px;
-    background-color: transparent;
-    color: @color12;
+/*    background-color: @color9;*/
+/*    margin: 4px 2px 4px 2px;*/
+    color: black;
 }
 
 #temperature.critical {
@@ -337,16 +354,16 @@ label:focus {
 }
 
 #tray {
-    color: @color15;
-    margin-top: 5px;
+    color: black;
+    margin-top: 4px;
     margin-left: 0px;
     padding-right: 10px;
     padding-left: 10px;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
     /*font-size: 12px;*/
     font-weight: bold;
     transition: none;
-    background: black;
+    background: @color11;
 }
 
 #tray > .passive {

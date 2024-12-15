@@ -1,12 +1,9 @@
-instalados no ambiente hyprland
-
 hyprland
 waybar
 swww (wallpaper)
 dunst (notificação)
 hyprlock (lock screen)
 rofi (app launcher) (check https://github.com/adi1090x/rofi https://github.com/dctxmei/rofi-themes https://github.com/Murzchnvok/rofi-collection)
-rofi wifi menu
 hypridle (idle behavior)
 hyprpicker (pick colors)
 xdg-desktop-portal-hyprland (screen sharing)
@@ -17,7 +14,7 @@ cliphist (clipboard manager, img e texto)
 hyprshade (automação de troca de shader)
 hyprls (auto-completion)
 
-3 extensoes do hyprland pro vscode (hyprls, hyprland e hyprlang)
+vscode -> hyprls, hyprland e hyprlang
 
 grim (screenshot utility)
 slurp (pra usar junto ao grim) NOTA: O flameshot nao funciona com Hyprland

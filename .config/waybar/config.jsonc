@@ -2,7 +2,7 @@
 {
     // "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 10, // Waybar height (to be removed for auto height)
+    "height": 6, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
@@ -12,14 +12,19 @@
     "modules-left": [
         "custom/powermenu",
 	"hyprland/workspaces",
-	"custom/whatsapp"
-//	"hyprland/window"
+	//"custom/whatsapp"
+	"hyprland/window"
+	//"clock"
     ],
     "modules-center": [
         "clock"
     ],
     "modules-right": [
 	"group/info",
+	//"cpu",
+	//"memory",
+	//"temperature",
+	"network",
         "battery",
         "battery#bat2",
         "pulseaudio",
@@ -27,7 +32,7 @@
     ],
     // Modules configuration
     "custom/powermenu": {
-	"format": "⏻",
+	"format":"",//"⏻",
     	"on-click": "~/dotfiles/.config/rofi/powermenu/type-2/powermenu.sh",
     	"tooltip": true,
 	"tooltip-format": "powermenu"
@@ -42,31 +47,73 @@
     },
      "hyprland/workspaces": {
          "disable-scroll": true,
-         "all-outputs": true,
+	 "all-outputs": true,
          "warp-on-scroll": false,
-         "format": "{id}",
+         "format": "{icon}",
+         "format-icons": {
+   //          "urgent": "",
+   	     "urgent":"!",
+	     "1":"I",
+	     "2":"II",
+	     "3":"III",
+	     "4":"IV",
+	     "5":"V",
+	     "6":"VI",
+	     "7":"VII",
+	     "8":"VIII",
+	     "9":"IX",
+	     "10":"X",
+	     "11":"XI",
+	     "12":"XII",
+	     "13":"XIII",
+	     "14":"XIV",
+	     "15":"XV",
+	     "16":"XVI",
+	     "17":"XVII",
+	     "18":"XVIII",
+	     "19":"XIX",
+             "20":"XX"
+         },
 	 "persistent-workspaces":{
-		 "*": 3
+		 "*": 5
 	}
     },
     
     "hyprland/window": {
 	"format": "{initialTitle}",
-	/*"rewrite": {
-		"(.*) Firefox": "󰈹 ",
+	"rewrite": {
+		"(.*) Firefox": "󰈹",
         	"(.*) Konsole": "",
 		"Alacritty": "",
-		"kitty": ""
-    	}*/	
+		"winit window": "",
+		"kitty": "",
+		"whatsdesk":"",
+		"Visual Studio Code":"󰨞"
+    	}	
     },
     
     "clock": {
+	"timezone": "America/Sao_Paulo",
 	"interval": 60,
-        "format": "{:%b %d, %H:%M}",
+        "format": "   {:%b %d, %H:%M}",
         "max-length": 25,
 	"tooltip": true,
-	"tooltip-format": "{:%A, %d/%m/%y}"
-    },
+        "tooltip-format": "<tt>{calendar}</tt>",
+/*	"tooltip-format": "{:%A, %d/%m/%y}",*/
+	"calendar": {
+		"mode"          : "year",
+                "mode-mon-col"  : 3,
+                "weeks-pos"     : "right",
+                "on-scroll"     : 1,
+                "format": {
+			"months":     "<span color='#ffead3'><b>{}</b></span>",
+                        "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+                        "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+                        "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+                        "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+                        }
+                }
+    	},
 	
     "cpu": {
 	"interval": 5,
@@ -75,7 +122,7 @@
 
     "memory": {
        "interval": 5,
-       "format": "{percentage}%", 
+       "format": "  {percentage}%",
        "tooltip-format": "memory usage"
     },
 
@@ -95,7 +142,7 @@
         "interval": 5,
 	"format": "{essid}",
 	"format-wifi": "󱚻   {bandwidthTotalBytes}",
-	"format-disconnected": "󰖪",
+	"format-disconnected": "󰖪 ",
 	"max-length": 15,
 	"on-click": "nm-applet --indicator",
 	"on-click-right": "killall nm-applet",
@@ -106,7 +153,7 @@
 
     "group/info": {
 	"orientation": "horizontal",
-	"modules": ["cpu", "memory", "disk", "custom/separator", "temperature", "custom/separator", "network"]
+	"modules": ["cpu", "custom/separator","memory", "custom/separator", "temperature"]
     },
 	
     "custom/separator": {
@@ -123,8 +170,8 @@
 	"design-capacity": true,
         "format": "{capacity}% {icon}",
         "format-full": "{capacity}% {icon}",
-        "format-charging": "{capacity}% 󰂄",
-        "format-plugged": "{capacity}%",
+        "format-charging": "{capacity}% 󱐥", //󰂄",
+        "format-plugged": "{capacity}% 󱐥",
         "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
@@ -136,7 +183,7 @@
     },
     
     "tray": {
-        "icon-size": 17,
+        "icon-size": 16,
 	"spacing": 10
     },
 
