@@ -111,19 +111,18 @@ fi
 if [ $IP3 ]; then
     WIFI="%F{green}─🮤󰀂  %F{cyan}$IP3%b%F{green}🮥" #CHANGE ME (ICON)
 #
-else
-    IP4=$(curl -s https://ipinfo.io/ip)
-    if [ $IP4 ]; then
-        WIFI="%F{green}─🮤󰀂  %F{cyan}$IP4%b%F{green}🮥"
-    else
-        WIFI=""
-    fi
+#else
+#    IP4=$(curl -s https://ipinfo.io/ip)
+#    if [ $IP4 ]; then
+#        WIFI="%F{green}─🮤󰀂  %F{cyan}$IP4%b%F{green}🮥"
+#    else
+#        WIFI=""
+#    fi
 fi
 
 if [ "$EUID" = 0 ]; then
     HOST=$'%F{magenta}root%F{yellow}@'
 else
-#    HOST="" # CHANGE ME
     HOST=$'%F{cyan}'$USER'%F{yellow}@'
 fi
 
