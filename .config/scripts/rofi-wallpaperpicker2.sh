@@ -22,7 +22,7 @@
 
 
 # Set some variables
-wall_dir="${HOME}/dotfiles/Imagens/catppuccin-wallpapers-mess"
+wall_dir="${HOME}/dotfiles/.config/images/catppuccin-wallpapers-mess"
 cacheDir="${HOME}/.cache/jp${theme}"
 rofi_command="rofi -x11 -dmenu -theme ${HOME}/dotfiles/.config/rofi/config.rasi -theme-str ${rofi_override}"
 

@@ -7,46 +7,54 @@
 		"height": 14*/
 	},
 	"display": {
-		"separator": "    "
-		// "bar": {
-		// 	"charTotal": "=",
-		// 	"charElapsed": "■",
-		// 	"width": 10,
-		// 	"borderLeft": "[ ",
-		// 	"borderRight": " ]"
-		// 	}
-	},
+		"separator": "    ",
+		"bar": {
+			"charTotal": "=",
+			"charElapsed": "■",
+			"width": 10,
+			"borderLeft": "[ ",
+			"borderRight": " ]"
+			}
+		},
 	"modules": [
-		"title",
+		// "title",
+		{
+			"type": "title",
+			"format": "{#1}╭────── {#}{user-name-colored}@{host-name-colored} ──────╮"
+		},	
 		{
 			"type": "os",
-			"key": "󰣇",
+			"key": "   󰣇",
 			"keyColor": "blue"
 		},
 		{
 			"type": "uptime",
-			"key": "",
+			"key": "   ",
 			"keyColor": "yellow"
 		},
 		{
 			"type": "packages",
-			"key": "󰮯",
+			"key": "   󰮯",
 			"keyColor": "green"
 		},
 		{
 			"type":"terminal",
-			"key": "",
+			"key": "   ",
 			"keyColor": "magenta"
 		},
 		{
 			"type": "shell",
-			"key": "$",
+			"key": "   $",
 			"keyColor": "red"
 		},
 		{
 			"type": "wm",
-			"key": "",
+			"key": "   ",
 			"keyColor": "cyan"
+		},
+		{
+			"type": "custom",
+			"format": "{#1}╰───────────────────────────╯"
 		}
 	]
 

@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Determina a paleta de cores
-wal -q -i ~/Imagens/Wallpapers/OneMonitor/
+wal -q -i ~/.config/imagens/Wallpapers/OneMonitor/
 
 # Importa um arquivo do PyWal pra determinar o wallpaper
 source ~/.cache/wal/colors.sh
