@@ -55,8 +55,12 @@
 		{
 			"type": "custom",
 			"format": "{#1}╰───────────────────────────╯"
+		},
+		{
+			"type": "colors",
+			"paddingLeft": 2
 		}
 	]
-
-
+	
+	
 }

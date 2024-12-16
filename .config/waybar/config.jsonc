@@ -164,11 +164,11 @@
 
     "battery": {
         "states": {
-            // "good": 95,
+            "good": 70,
             "warning": 30,
             "critical": 15
         },
-	"design-capacity": true,
+//	"design-capacity": true,
         "format": "{capacity}% {icon}",
         "format-full": "{capacity}% {icon}",
         "format-charging": "{capacity}% 󱐥", //󰂄",
