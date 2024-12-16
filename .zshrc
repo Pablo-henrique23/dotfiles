@@ -162,7 +162,7 @@ precmd() {
     vcs_info
 }
 
-zstyle ':vcs_info:git:*' formats $'\n├──🮤%F{red} %F{cyan}%b%F{green}%a🮥'
+zstyle ':vcs_info:git:*' formats $'\n├──🮤%F{red}󰊢 %F{cyan}%r %F{red} %F{cyan}%b%F{green}%a🮥'
 # zstyle ':vcs_info:*' check-for-changes true 
 
 if [ "$color_prompt" = yes ]; then
