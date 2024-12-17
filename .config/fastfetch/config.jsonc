@@ -20,7 +20,10 @@
 			}
 		},
 	"modules": [
-		// "title",
+		// {
+		// 	"type": "title",
+		// 	"format": "Let'em remember us"
+		// },
 		{
 			"type": "title",
 			"format": "{#1}╭────── {#}{user-name-colored}@{host-name-colored} ──────╮"

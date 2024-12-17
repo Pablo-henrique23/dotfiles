@@ -151,7 +151,7 @@ button:hover {
     background-color: @color15;
     color: black;
     margin: 4px 2px 4px 2px;
-    padding: 0px 12px 0px 8px;
+    padding: 0px 8px;
 }
 #workspaces {
     margin: 4px 2px 4px 2px;
