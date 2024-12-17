@@ -2,7 +2,7 @@
 {
     // "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 6, // Waybar height (to be removed for auto height)
+    "height": 24, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
@@ -11,21 +11,20 @@
     "margin-right": 0,
     "modules-left": [
         "custom/powermenu",
-	"hyprland/workspaces",
-	//"custom/whatsapp"
-	"hyprland/window"
-	//"clock"
+        "hyprland/workspaces",
+        //"custom/whatsapp"
+        "hyprland/window"
+        //"clock"
     ],
     "modules-center": [
-//        "hyprland/window",
-	"clock"
+        "clock"
     ],
     "modules-right": [
-	"group/info",
-	//"cpu",
-	//"memory",
-	//"temperature",
-	"network",
+        "group/info",
+        //"cpu",
+        //"memory",
+        //"temperature",
+        "network",
         "battery",
         "battery#bat2",
         "pulseaudio",
@@ -48,36 +47,36 @@
     },
      "hyprland/workspaces": {
          "disable-scroll": true,
-	 "all-outputs": true,
+    	 "all-outputs": true,
          "warp-on-scroll": false,
          "format": "{icon}",
          "format-icons": {
    //          "urgent": "",
-   	     "urgent":"!",
-	     "1":"I",
-	     "2":"II",
-	     "3":"III",
-	     "4":"IV",
-	     "5":"V",
-	     "6":"VI",
-	     "7":"VII",
-	     "8":"VIII",
-	     "9":"IX",
-	     "10":"X",
-	     "11":"XI",
-	     "12":"XII",
-	     "13":"XIII",
-	     "14":"XIV",
-	     "15":"XV",
-	     "16":"XVI",
-	     "17":"XVII",
-	     "18":"XVIII",
-	     "19":"XIX",
-             "20":"XX"
-         },
-	 "persistent-workspaces":{
-		 "*": 5
-	}
+            "urgent":"!",
+            "1":"I",
+            "2":"II",
+            "3":"III",
+            "4":"IV",
+            "5":"V",
+            "6":"VI",
+            "7":"VII",
+            "8":"VIII",
+            "9":"IX",
+            "10":"X",
+            "11":"XI",
+            "12":"XII",
+            "13":"XIII",
+            "14":"XIV",
+            "15":"XV",
+            "16":"XVI",
+            "17":"XVII",
+            "18":"XVIII",
+            "19":"XIX",
+            "20":"XX"
+        },
+        "persistent-workspaces":{
+            "*": 5
+	    }
     },
     
     "hyprland/window": {
@@ -94,36 +93,36 @@
     },
     
     "clock": {
-	"timezone": "America/Sao_Paulo",
-	"interval": 60,
-        "format": "   {:%b %d, %H:%M}",
+        "timezone": "America/Sao_Paulo",
+        "interval": 60,
+        "format": "   {:%a %d/%m, %H:%M}",
         "max-length": 25,
-	"tooltip": true,
+        "tooltip": true,
         "tooltip-format": "<tt>{calendar}</tt>",
-/*	"tooltip-format": "{:%A, %d/%m/%y}",*/
-	"calendar": {
-		"mode"          : "year",
-                "mode-mon-col"  : 3,
-                "weeks-pos"     : "right",
-                "on-scroll"     : 1,
-                "format": {
-			"months":     "<span color='#ffead3'><b>{}</b></span>",
-                        "days":       "<span color='#ecc6d9'><b>{}</b></span>",
-                        "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
-                        "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
-                        "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
-                        }
+    /*	"tooltip-format": "{:%A, %d/%m/%y}",*/
+        "calendar": {
+            "mode": "year",
+            "mode-mon-col"  : 3,
+            "weeks-pos"     : "right",
+            "on-scroll"     : 1,
+            "format": {
+                "months":   "<span color='#ffead3'><b>{}</b></span>",
+                "days":     "<span color='#ecc6d9'><b>{}</b></span>",
+                "weeks":    "<span color='#99ffdd'><b>W{}</b></span>",
+                "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+                "today":    "<span color='#ff6699'><b><u>{}</u></b></span>"
                 }
+            }
     	},
 	
     "cpu": {
-	"interval": 5,
+	"   interval": 5,
         "format": "   {usage}%"
     },
 
     "memory": {
        "interval": 5,
-       "format": "  {percentage}%",
+       "format": "   {percentage}%",
        "tooltip-format": "memory usage"
     },
 
@@ -141,25 +140,25 @@
     
     "network": {
         "interval": 5,
-	"format": "{essid}",
-	"format-wifi": "󱚻   {bandwidthTotalBytes}",
-	"format-disconnected": "󰖪 ",
-	"max-length": 15,
-	"on-click": "nm-applet --indicator",
-	"on-click-right": "killall nm-applet",
-	"tooltip-format": "{ipaddr}/{essid}",
-	"tooltip-format-disconnected": "Desconectado"
+        "format": "{essid}",
+        "format-wifi": "󱚻   {bandwidthTotalBytes}",
+        "format-disconnected": "󰖪 ",
+        "max-length": 15,
+        "on-click": "nm-applet --indicator",
+        "on-click-right": "killall nm-applet",
+        "tooltip-format": "{ipaddr}/{essid}",
+        "tooltip-format-disconnected": "Desconectado"
 
     },
 
     "group/info": {
-	"orientation": "horizontal",
-	"modules": ["cpu", "custom/separator","memory", "custom/separator", "temperature"]
+        "orientation": "horizontal",
+        "modules": ["cpu", "custom/separator","memory", "custom/separator", "temperature"]
     },
 	
     "custom/separator": {
         "tooltip": false,
-	"format": "|"
+	    "format": "|"
     },
 
     "battery": {
@@ -185,7 +184,7 @@
     
     "tray": {
         "icon-size": 16,
-	"spacing": 10
+	    "spacing": 10
     },
 
     "pulseaudio": {

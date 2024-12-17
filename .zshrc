@@ -244,6 +244,8 @@ new_line_before_prompt=no # yes CHANGE ME
 # enable color support of ls, less and man, and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ff='fastfetch'
+    alias neo='neofetch'
     alias pipes='pipes.sh'
     alias clock='peaclock'
     alias ls='ls --color=auto'
