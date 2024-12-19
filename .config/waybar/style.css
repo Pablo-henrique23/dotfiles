@@ -10,11 +10,11 @@
 window#waybar {    
     /* background-color: rgba(10, 10, 10, 0.5);  */
     /* background-color: #3B333E; */
-    background-color: rgba(59, 51, 62, 0.9);
+    background-color: rgba(59, 51, 62, 0.7);
     color: @foreground;
     transition-property: background-color;
     transition-duration: .5s;
-    border-radius: 10px;
+/*    border-radius: 10px; */
 }
 
 window#waybar.hidden {
