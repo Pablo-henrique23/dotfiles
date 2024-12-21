@@ -83,7 +83,7 @@ configuration {
 
 	/*---------- Misc setting ----------*/
 	terminal: "rofi-sensible-terminal";
-	font: "Mono 12";
+	font: "Mono 14";
 	sort: false;
 	threads: 0;
 	click-to-exit: true;
@@ -188,4 +188,5 @@ configuration {
 element-text {
  background-color: inherit;
  text-color: inherit;
+ vertical-align: 0.5;
 }

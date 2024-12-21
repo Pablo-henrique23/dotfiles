@@ -24,7 +24,6 @@
 # Set some variables
 wall_dir="${HOME}/dotfiles/.config/images/Wallpapers/OneMonitor/"
 cacheDir="${HOME}/.cache/jp/${theme}"
-rofi_command="rofi -x11 -dmenu -theme ${HOME}/dotfiles/.config/rofi/config.rasi -theme-str ${rofi_override}"
 
 # Create cache dir if not exists
 if [ ! -d "${cacheDir}" ] ; then
@@ -37,8 +36,10 @@ monitor_res=$(hyprctl monitors |grep -A2 Monitor |head -n 2 |awk '{print $1}' | 
 dotsperinch=$(echo "scale=2; $monitor_res / $physical_monitor_size" | bc | xargs printf "%.0f")
 monitor_res=$(( $monitor_res * $physical_monitor_size / $dotsperinch ))
 
-rofi_override="element-icon{size:${monitor_res}px;border-radius:0px;}"
+#rofi_override="element-icon{size:${monitor_res}px;border-radius:0px;}"
+rofi_override="element-icon{size:50px;border-radius:0px;}"
 
+rofi_command="rofi -x11 -dmenu -theme ${HOME}/dotfiles/.config/rofi/config.rasi -theme-str ${rofi_override}"
 # Convert images in directory and save to cache dir
 for imagen in "$wall_dir"/*.{jpg,jpeg,png,webp,gif}; do
 	if [ -f "$imagen" ]; then
