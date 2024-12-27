@@ -3,6 +3,7 @@
 #(cat ~/.cache/wal/sequences &)
 #source ~/.cache/wal/colors-tty.sh
 
+export PIPENV_VENV_IN_PROJECT=1
 HISTFILE=~/.zsh_history
 HISTSIZE=1000
 SAVEHIST=1000
