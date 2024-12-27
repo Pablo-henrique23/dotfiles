@@ -1,5 +1,5 @@
 #!/usr/bin/bash
 
-sudo pacman -Syu hyprland waybar swww dunst hyprlock rofi hypridle hyprpicker xdg-desktop-portal-hyprland pipewire wireplumber hyprcursor cliphist grim slupr gwenview python-pywal sddm network-manager-applet
+sudo pacman -Syu hyprland waybar swww dunst hyprlock rofi hypridle hyprpicker xdg-desktop-portal-hyprland pipewire wireplumber hyprcursor cliphist grim slupr gwenview python-pywal sddm network-manager-applet fastfetch zsh
 
-yay -S hyprshade
+yay -S hyprshade pokemon-colorscripts-git

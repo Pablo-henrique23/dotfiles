@@ -18,6 +18,9 @@ pacman:
 	python-pywal
 	sddm
 	network-manager-applet
+	fastfetch
+	zsh
 
 aur:
 	hyprshade
+	pokemon-colorscripts-git
