@@ -1,4 +1,5 @@
 pacman:
+	ghostty
 	hyprland
 	waybar
 	swww
