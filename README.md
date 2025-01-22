@@ -8,6 +8,6 @@ The dotfiles for my Arch Linux + Hyprland setup.
 ```
 git clone https://github.com/Pablo-henrique23/dotfiles
 cd dotfiles
-sh install.sh`
+sh .install.sh`
 stow .
 ```
