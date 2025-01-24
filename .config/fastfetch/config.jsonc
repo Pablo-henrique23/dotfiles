@@ -26,7 +26,7 @@
 		// },
 		{
 			"type": "title",
-			"format": "{#1}╭────── {#}{user-name-colored}@{host-name-colored} ──────╮"
+			"format": "{#1}╭─────────────── {#}{user-name-colored}@{host-name-colored} ───────────────╮"
 		},	
 		{
 			"type": "os",
@@ -60,7 +60,7 @@
 		},
 		{
 			"type": "custom",
-			"format": "{#1}╰───────────────────────────╯"
+			"format": "{#1}╰─────────────────────────────────────────────╯"
 		}
 		/*,
 		{
