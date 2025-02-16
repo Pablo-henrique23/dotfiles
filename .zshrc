@@ -172,7 +172,7 @@ if [ "$color_prompt" = yes ]; then
     LINE1=$'%F{green}┌──🮤'$NAME'%F{green}🮥$LOCAL$VPN$WIFI'
     LINE2='${vcs_info_msg_0_}'
     LINE3=$'\n├──🮤%F{yellow}  '$DIR'🮥'
-    LINE4=$'\n└─%B$ICON %F{reset}%b'
+    LINE4=$'\n└─%B$ICON %F{green}> %F{reset}%b'
 
     TIME=$'%t'
 
