@@ -120,11 +120,12 @@ if [ $IP3 ]; then
 #        WIFI=""
 #    fi
 fi
-
 if [ "$EUID" = 0 ]; then
     HOST=$'%F{magenta}root%F{yellow}@'
+    MARK='#'
 else
     HOST=$'%F{cyan}'$USER'%F{yellow}@'
+    MARK='$'
 fi
 
 HOSTNAME=$(hostname)
@@ -164,7 +165,7 @@ precmd() {
 }
 
 zstyle ':vcs_info:git:*' formats $'\n├──🮤%F{red}󰊢 %F{cyan}%r %F{red} %F{cyan}%b%F{green}%a🮥'
-# zstyle ':vcs_info:*' check-for-changes true 
+# zstyle ':vcs_info:*' check-for-changes true
 
 if [ "$color_prompt" = yes ]; then
 
@@ -172,8 +173,8 @@ if [ "$color_prompt" = yes ]; then
     LINE1=$'%F{green}┌──🮤'$NAME'%F{green}🮥$LOCAL$VPN$WIFI'
     LINE2='${vcs_info_msg_0_}'
     LINE3=$'\n├──🮤%F{yellow}  '$DIR'🮥'
-    LINE4=$'\n└─%B$ICON %F{green}> %F{reset}%b'
-
+    LINE4=$'\n└─%B$ICON %F{green}$MARK%F{reset}%b '
+    
     TIME=$'%t'
 
     PROMPT=$LINE1$LINE2$LINE3$LINE4
