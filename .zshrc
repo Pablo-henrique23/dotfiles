@@ -286,3 +286,4 @@ fi
 
 export PATH=$PATH:/home/pablo/.local/share/gem/ruby/3.3.0/bin
 # End of lines added by compinstall
+source /usr/share/nvm/init-nvm.sh
