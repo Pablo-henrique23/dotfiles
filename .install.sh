@@ -5,3 +5,5 @@ sudo pacman -Syu stow hyprland waybar swww dunst hyprlock rofi hypridle hyprpick
 sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && yay -Y --gendb && yay -Syu --devel
 
 yay -S hyprshade pokemon-colorscripts-git
+
+cd ~/dotfiles && stow .
