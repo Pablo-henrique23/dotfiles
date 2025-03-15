@@ -13,41 +13,44 @@
         "custom/powermenu",
         "hyprland/workspaces",
         //"custom/whatsapp"
-        "hyprland/window",
-	    "custom/spotify"
+        "hyprland/window"
+        //"clock"
     ],
     "modules-center": [
         "clock"
     ],
     "modules-right": [
         "group/info",
+        //"cpu",
+        //"memory",
+        //"temperature",
         "network",
         "battery",
         "battery#bat2",
         "pulseaudio",
         "tray"
     ],
-    
+    // Modules configuration
     "custom/powermenu": {
-	    "format":"",//"⏻",
+	"format":"",//"⏻",
     	"on-click": "~/dotfiles/.config/rofi/powermenu/type-2/powermenu.sh",
     	"tooltip": true,
-	    "tooltip-format": "powermenu"
+	"tooltip-format": "powermenu"
     },
-    
     "custom/whatsapp": {
     	"format": "󰖣",
-        "tooltip": true,
-        "tooltip-format": "Whatsapp",
-        "on-click": "whatsdesk"
-    },
+	"tooltip": true,
+	"tooltip-format": "Whatsapp",
+	"on-click": "whatsdesk"
+
     
-    "hyprland/workspaces": {
-        "disable-scroll": true,
-        "all-outputs": true,
-        "warp-on-scroll": false,
-        "format": "{icon}",
-        "format-icons": {
+    },
+     "hyprland/workspaces": {
+         "disable-scroll": true,
+    	 "all-outputs": true,
+         "warp-on-scroll": false,
+         "format": "{icon}",
+         "format-icons": {
    //          "urgent": "",
             "urgent":"!",
             "1":"I",
@@ -70,32 +73,23 @@
             "18":"XVIII",
             "19":"XIX",
             "20":"XX"
-            },
+        },
         "persistent-workspaces":{
             "*": 5
 	    }
     },
     
     "hyprland/window": {
-        "format": "{initialTitle}",
-        "rewrite": {
-            "(.*) Firefox": "󰈹 ",
-            "(.*) Konsole": " ",
-            "Alacritty": " ",
-            "winit window": " ",
-            "kitty": " ",
-            "whatsdesk":" ",
-            "Visual Studio Code":"󰨞 "
-        }	
-    },
-    
-    "custom/spotify": {
-        "exec": "/usr/bin/python3 ~/dotfiles/.config/waybar/custom/mediaplayer.py --player spotify",
-        "format": "{}  ",
-        "return-type": "json",
-        "on-click": "playerctl play-pause",
-        "on-scroll-up": "playerctl next",
-        "on-scroll-down": "playerctl previous"
+	"format": "{initialTitle}",
+	"rewrite": {
+		"(.*) Firefox": "󰈹 ",
+        	"(.*) Konsole": " ",
+		"Alacritty": " ",
+		"winit window": " ",
+		"kitty": " ",
+		"whatsdesk":" ",
+		"Visual Studio Code":"󰨞 "
+	}	
     },
     
     "clock": {
@@ -122,7 +116,7 @@
     	},
 	
     "cpu": {
-	    "interval": 5,
+	"   interval": 5,
         "format": "   {usage}%"
     },
 
@@ -154,6 +148,7 @@
         "on-click-right": "killall nm-applet",
         "tooltip-format": "{ipaddr}/{essid}",
         "tooltip-format-disconnected": "Desconectado"
+
     },
 
     "group/info": {
