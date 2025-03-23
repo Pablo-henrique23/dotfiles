@@ -2,28 +2,22 @@
 {
     // "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
-    "height": 24, // Waybar height (to be removed for auto height)
+    "height": 28, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
-    // Choose the order of the modules
-//    "margin-top": 5,
-//    "margin-left": 5,
-//    "margin-right": 5,
+    "margin-top": 3,
+    "margin-left": 7,
+    "margin-right": 7,
     "modules-left": [
         "custom/powermenu",
         "hyprland/workspaces",
-        //"custom/whatsapp"
         "hyprland/window"
-        //"clock"
     ],
     "modules-center": [
         "clock"
     ],
     "modules-right": [
-        "group/info",
-        //"cpu",
-        //"memory",
-        //"temperature",
+        "cpu",
         "network",
         "battery",
         "battery#bat2",
@@ -32,70 +26,68 @@
     ],
     // Modules configuration
     "custom/powermenu": {
-	"format":"",//"⏻",
+	    "format":"",//"⏻",
     	"on-click": "~/dotfiles/.config/rofi/powermenu/type-2/powermenu.sh",
     	"tooltip": true,
-	"tooltip-format": "powermenu"
+	    "tooltip-format": "powermenu"
     },
     "custom/whatsapp": {
     	"format": "󰖣",
-	"tooltip": true,
-	"tooltip-format": "Whatsapp",
-	"on-click": "whatsdesk"
-
-    
+        "tooltip": true,
+        "tooltip-format": "Whatsapp",
+        "on-click": "whatsdesk"
     },
      "hyprland/workspaces": {
          "disable-scroll": true,
     	 "all-outputs": true,
          "warp-on-scroll": false,
-         "format": "{icon}",
-         "format-icons": {
-   //          "urgent": "",
-            "urgent":"!",
-            "1":"I",
-            "2":"II",
-            "3":"III",
-            "4":"IV",
-            "5":"V",
-            "6":"VI",
-            "7":"VII",
-            "8":"VIII",
-            "9":"IX",
-            "10":"X",
-            "11":"XI",
-            "12":"XII",
-            "13":"XIII",
-            "14":"XIV",
-            "15":"XV",
-            "16":"XVI",
-            "17":"XVII",
-            "18":"XVIII",
-            "19":"XIX",
-            "20":"XX"
-        },
+         "format": "{name}",
+//          "format-icons": {
+//    //          "urgent": "",
+//             "urgent":"!",
+//             "1":"I",
+//             "2":"II",
+//             "3":"III",
+//             "4":"IV",
+//             "5":"V",
+//             "6":"VI",
+//             "7":"VII",
+//             "8":"VIII",
+//             "9":"IX",
+//             "10":"X",
+//             "11":"XI",
+//             "12":"XII",
+//             "13":"XIII",
+//             "14":"XIV",
+//             "15":"XV",
+//             "16":"XVI",
+//             "17":"XVII",
+//             "18":"XVIII",
+//             "19":"XIX",
+//             "20":"XX"
+//         },
         "persistent-workspaces":{
-            "*": 5
+            "*": 3
 	    }
     },
     
     "hyprland/window": {
-	"format": "{initialTitle}",
-	"rewrite": {
-		"(.*) Firefox": "󰈹 ",
-        	"(.*) Konsole": " ",
-		"Alacritty": " ",
-		"winit window": " ",
-		"kitty": " ",
-		"whatsdesk":" ",
-		"Visual Studio Code":"󰨞 "
-	}	
+        "format": "{initialTitle}",
+        "rewrite": {
+            "(.*) Firefox": "󰈹 ",
+            "(.*) Konsole": " ",
+            "Alacritty": " ",
+            "winit window": " ",
+            "kitty": " ",
+            "whatsdesk":" ",
+            "Visual Studio Code":"󰨞 "
+        }	
     },
     
     "clock": {
         "timezone": "America/Sao_Paulo",
         "interval": 60,
-        "format": "   {:%a %d/%m, %H:%M}",
+        "format": "   {:%H:%M}",
         "max-length": 25,
         "tooltip": true,
         "tooltip-format": "<tt>{calendar}</tt>",

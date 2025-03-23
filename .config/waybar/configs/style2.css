@@ -1,29 +1,32 @@
-@import 'colors-waybar.css';
+@import '../colors-waybar.css';
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: sans-serif, Roboto;
-    font-size: 11px;
+    font-size: 13px;
     border: none;
     min-height: 0px;
 }
+#waybar {
+    border-radius: 4px;
+}
 
-window#waybar {    
-    /* background-color: rgba(10, 10, 10, 0.5);  */
-    /* background-color: #3B333E; */
-    background-color: rgba(59, 51, 62, 0.7);
-    color: @foreground;
-    transition-property: background-color;
-    transition-duration: .5s;
-/*    border-radius: 10px; */
+#window{
+    background: rgba(60,60,60,1);;
+    color: white;
+    margin: 4px 2px 4px 2px;
+    padding: 0px 7px;
+    padding-left: 8px;
+    border-radius: 4px;
+    
 }
 
 window#waybar.hidden {
     opacity: 0.2;
 }
 
-
 window#waybar.empty #window{
-    background-color: transparent;
+    background: transparent;
+    border: 0px hidden;
 }
 
 window#waybar.termite {
@@ -46,59 +49,44 @@ window#waybar.chromium {
 #battery,
 #pulseaudio,
 #tray {
-    border-radius: 6px;
+    background-color: rgba(59, 51, 62, 0.7);
+    border-radius: 4px;
 }
 
 button {
-    /* Use box-shadow instead of border so the text isn't offset */
     box-shadow: inset 0 -3px transparent;
-    /* Avoid rounded borders under each button name */
-    /* border: none; */
 }
-
-/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
-/*button:hover {
-    background: inherit;
-    box-shadow: inset 0 -2px #ffffff;
-}*/
-
-/* you can set a style on hover for any module like this */
 
 #workspaces {
     margin: 4px 2px 4px 2px;
-    background: transparent;
+    background: rgba(60,60,60,1);
     padding-right: 0px;
     padding-left: 0px;
+    
     border-radius: 4px;
-   
 }
 
 #workspaces button {
-    padding: 0 5px;
-    margin: 0 2px;
-    background-color: transparent;
-    color: @color6;
+    border-radius: 4px;
+    padding: 0 6px;
+    margin: 0px;
+    background: rgba(60,60,60,1);;
+    color: rgba(255,255,255, 0.85);
     font-weight: bold;
-
 }
 
 #workspaces button:hover {
-    background: @color6; /*rgba(0, 0, 0, 0.2);*/
-/*    background-color: @color10;*/
-/*    box-shadow: inset 0 -1px white;*/
+    background-color: rgba(255,255,255, 0.85);
     color: black;
 }
 
 #workspaces button.active {
-/*    box-shadow: inset 0 -2px @color15;*/
-    border-radius: 4px;
     color: black;
-    background-color: @color6;
+    background-color: rgba(255,255,255, 0.85);
 }
 
 #workspaces button.focused {
-    background-color: #64727D;
-    box-shadow: inset 0 -2px #ffffff;
+    background-color: rgba(255,255,255, 0.85);
 }
 
 #workspaces button.urgent {
@@ -110,9 +98,8 @@ button {
     box-shadow: inset 0 -3px #ffffff;
 }
 
-
 #custom-powermenu {
-    color: black; /*@color12;*/
+    color: rgba(255,255,255, 0.85);
     margin-top: 4px;
     margin-left: 5px;
     margin-bottom: 4px;
@@ -120,44 +107,13 @@ button {
     padding-left: 10px;
     font-weight: bold;
     transition: none;
-    background: @color11;
-
+    background: rgba(60,60,60,1);;
+    
 }
+
 #custom-powermenu:hover{
     color: white;
 }
-
-#custom-whatsapp {
-    color: @color15;
-    margin-top: 4px;
-    margin-bottom: 4px;
-    padding-right: 12px;
-    padding-left: 10px;
-    font-weight: bold;
-    transition: none;
-    background: black;
-}
-#custom-whatsapp:hover{
-    color: white;
-}
-#info {
-    padding: 0px 5px;
-    margin-top: 4px;
-    margin-left: 0px;
-    margin-bottom: 4px;
-    font-weight: bold;
-    /* font-size: 10px; */
-    background: @color14;
-}
-
-#window{
-    border-radius: 6px;
-    background-color: @color15;
-    color: black;
-    margin: 4px 2px 4px 2px;
-    padding: 0px 8px;
-}
-
 
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left > widget:first-child > #custom-powermenu {
@@ -173,40 +129,33 @@ button {
     padding-left: 10px;
     margin-bottom: 5px;
     padding-right: 10px;
-    padding-bottom: 2px;
     transition: none;
-    color:black;/* @color12;*/
-    background: @color15; /*black;@background;*/
-    font-weight: bold; 
+    color:white;/* @color12;*/
+    /* background: rgba(60,60,60,1); */
+    background: transparent;
+    font-weight: 900; 
     margin: 4px 2px 4px 2px;
+    
 }
 
 #battery,
 #battery.charging,
 #battery.plugged,
 #battery.critical:not(.charging){
-    color: black; /*@color15;*/
+    color: white;
     margin-top: 4px;
     margin-left: 0px;
     margin-bottom: 4px;
-    padding-left: 10px;
+    padding-left: 6px;
     padding-right: 10px;
-    /*font-weight: bold;*/
     transition: none;
-   /* background: black;*/
-    background: #32a852;
-    background: @color8;
+    background: rgba(60,60,60,1);
+    
+    font-weight: bold;
 }
-/*
-#battery.charging, #battery.plugged {
-    padding: 0 7px;
-    color: @color15;
-    background-color: transparent; #26A65B;*/
-
 
 @keyframes blink {
     to {
-        /*background-color: transparent;*/
         color: red;
     }
 }
@@ -214,9 +163,9 @@ button {
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) { 
     font-weight: bold;
-    color: black;/*@color15;*/
+    color: white;/*@color15;*/
     animation-name: blink;
-    animation-duration: 0.5s;
+    animation-duration: 1.0s;
     animation-timing-function: steps(12);
     animation-iteration-count: infinite;
     animation-direction: alternate;
@@ -246,35 +195,13 @@ label:focus {
 }
 
 #cpu {
-    padding-left: 3px;
+    padding-left: 6px;
     padding-right: 5px;
-/*    background-color: @color12;
-    margin: 4px 2px 4px 2px*/
-    color: black;
-}
-
-#memory {
-    padding: 0 3px;
-    background-color: @color14;
-    color: black;
-/*    margin: 4px 2px 4px 2px;*/
+    background: rgba(60,60,60,1);;
+    margin: 4px 2px 4px 2px;
+    color: white;
+    
     font-weight: bold;
-}
-
-#disk {
-    padding: 0 3px;
-    background-color: transparent;
-    color: @color12;
-}
-
-#custom-separator {
-   padding: 0 2px;
-   background-color: transparent;
-   color: black;   
-}
-
-#backlight {
-    background-color: #90b1b1;
 }
 
 #network {
@@ -284,37 +211,31 @@ label:focus {
     margin-right: 2px;
     padding-left: 5px;
     padding-right: 3px;
-    background-color: @color15;
-    color: black;
+    background: rgba(60,60,60,1);;
+    color: white;
+    
+    font-weight: bold;
 }
 
 #network.disconnected {
-    background-color: @color3;
-    color: black;
+    background: rgba(60,60,60,1);;
+    color: white;
 }
 
 #pulseaudio,
 #pulseaudio.muted,
 #pulseaudio:hover {
-    color: black; /*@color15;*/
+    color: white;
     margin-top: 4px;
     margin-left: 0px;
     margin-bottom: 4px;
     margin-right: 5px;
     padding-right: 14px;
-    padding-left: 10px;
-    /*font-weight: bold;*/
+    padding-left: 6px;
     transition: none;
-    background: @color2;
-}
-
-#wireplumber {
-    background-color: #fff0f5;
-    color: #000000;
-}
-
-#wireplumber.muted {
-    background-color: #f53c3c;
+    background: rgba(60,60,60,1);
+    
+    font-weight: bold;
 }
 
 #custom-media {
@@ -331,28 +252,21 @@ label:focus {
     background-color: #ffa000;
 }
 
-#temperature {
-    padding: 0 5px;
-/*    background-color: @color9;*/
-/*    margin: 4px 2px 4px 2px;*/
-    color: black;
-}
-
 #temperature.critical {
     background-color: #eb4d4b;
 }
 
 #tray {
-    color: black;
+    color: white;
     margin-top: 4px;
     margin-left: 0px;
     padding-right: 10px;
     padding-left: 10px;
     margin-bottom: 4px;
-    /*font-size: 12px;*/
     font-weight: bold;
     transition: none;
-    background: @color11;
+    background: rgba(60,60,60,1);
+    
 }
 
 #tray > .passive {
