@@ -1,0 +1,237 @@
+@import '../colors-waybar.css';
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: sans-serif, Roboto;
+    font-size: 13px;
+    border: none;
+    min-height: 0px;
+}
+#waybar {
+    border-radius: 4px;
+    background: rgba(40,40,40,1);
+}
+
+#window {
+    background: rgba(60,60,60,1);;
+    color: white;
+    margin: 4px 2px 4px 2px;
+    padding-right: 12px;
+    padding-left: 8px;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+window#waybar.empty #window{
+    border: none;
+    background: transparent;
+}
+
+window#waybar.termite {
+    background-color: #3F3F3F;
+}
+
+window#waybar.chromium {
+    background-color: #000000;
+    border: none;
+}
+
+#custom-spotify {
+    background-color: white;
+    color: black;
+    border-radius: 4px;
+    margin: 4px 2px 4px 2px;
+    padding: 0px 7px;
+}
+
+#custom-powermenu,
+#custom-whatsapp,
+#cpu,
+#memory,
+#temperature,
+#clock,
+#info,
+#network,
+#battery,
+#pulseaudio,
+#tray {
+    background-color: rgba(59, 51, 62, 0.7);
+    border-radius: 4px;
+}
+
+
+#workspaces {
+    margin: 4px 2px 4px 2px;
+    background: rgba(60,60,60,1);
+    padding-right: 0px;
+    padding-left: 0px;    
+    border-radius: 4px;
+}
+
+#workspaces button {
+    border-radius: 4px;
+    padding: 0 6px;
+    margin: 0px;
+    background: rgba(60,60,60,1);;
+    color: rgba(255,255,255, 0.85);
+    font-weight: bold;
+}
+
+#workspaces button:hover {
+    background-color: rgba(255,255,255, 0.85);
+    color: black;
+}
+
+#workspaces button.active {
+    color: black;
+    background-color: rgba(255,255,255, 0.85);
+}
+
+#workspaces button.focused {
+    background-color: rgba(255,255,255, 0.85);
+}
+
+#workspaces button.urgent {
+    background-color: #eb4d4b;
+}
+
+#custom-powermenu {
+    color: rgba(255,255,255, 0.85);
+    margin-top: 4px;
+    margin-left: 5px;
+    margin-bottom: 4px;
+    padding-right: 12px;
+    padding-left: 8px;
+    font-weight: bold;
+    transition: none;
+    background: rgba(60,60,60,1);;
+}
+
+#custom-powermenu:hover{
+    color: #2094D5;
+}
+
+/* If workspaces is the leftmost module, change left margin */
+.modules-left > widget:first-child > #custom-powermenu {
+    margin-left: 8px;
+}
+
+/* If workspaces is the rightmost module, change right margin */
+.modules-right > widget:last-child > #tray {
+    margin-right: 8px;
+}
+
+#clock {
+    padding-left: 10px;
+    margin-bottom: 5px;
+    padding-right: 10px;
+    transition: none;
+    color:white;
+    background: transparent;
+    font-weight: 900; 
+    margin: 4px 2px 4px 2px;
+    /* background: rgba(60,60,60,1); */
+}
+
+#battery,
+#battery.charging,
+#battery.plugged,
+#battery.critical:not(.charging){
+    color: white;
+    margin-top: 4px;
+    margin-left: 0px;
+    margin-bottom: 4px;
+    padding-left: 6px;
+    padding-right: 10px;
+    transition: none;
+    background: rgba(60,60,60,1);
+    font-weight: bold;
+}
+
+@keyframes blink {
+    to {
+        color: red;
+    }
+}
+
+/* Using steps() instead of linear as a timing function to limit cpu usage */
+#battery.critical:not(.charging) { 
+    font-weight: bold;
+    color: white;/*@color15;*/
+    animation-name: blink;
+    animation-duration: 1.0s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+label:focus {
+    background-color: #000000;
+}
+
+#cpu {
+    padding-left: 6px;
+    padding-right: 5px;
+    background: rgba(60,60,60,1);;
+    margin: 4px 2px 4px 2px;
+    color: white;
+    
+    font-weight: bold;
+}
+
+#network {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding-left: 5px;
+    padding-right: 3px;
+    background: rgba(60,60,60,1);;
+    color: white;
+    font-weight: bold;
+}
+
+#network.disconnected {
+    background: rgba(60,60,60,1);;
+    color: white;
+}
+
+#pulseaudio,
+#pulseaudio.muted,
+#pulseaudio:hover {
+    color: white;
+    margin-top: 4px;
+    margin-left: 0px;
+    margin-bottom: 4px;
+    margin-right: 5px;
+    padding-right: 14px;
+    padding-left: 6px;
+    transition: none;
+    background: rgba(60,60,60,1);    
+    font-weight: bold;
+}
+
+#tray {
+    color: white;
+    margin-top: 4px;
+    margin-left: 0px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-bottom: 4px;
+    font-weight: bold;
+    transition: none;
+    background: rgba(60,60,60,1);;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #eb4d4b;
+}
