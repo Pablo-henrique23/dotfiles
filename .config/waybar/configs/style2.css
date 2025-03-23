@@ -8,16 +8,17 @@
 }
 #waybar {
     border-radius: 4px;
+    background: rgba(40,40,40,1);
 }
 
-#window{
+#window {
     background: rgba(60,60,60,1);;
     color: white;
     margin: 4px 2px 4px 2px;
-    padding: 0px 7px;
+    padding-right: 12px;
     padding-left: 8px;
     border-radius: 4px;
-    
+    font-weight: 500;
 }
 
 window#waybar.hidden {
@@ -25,8 +26,8 @@ window#waybar.hidden {
 }
 
 window#waybar.empty #window{
+    border: none;
     background: transparent;
-    border: 0px hidden;
 }
 
 window#waybar.termite {
@@ -36,6 +37,14 @@ window#waybar.termite {
 window#waybar.chromium {
     background-color: #000000;
     border: none;
+}
+
+#custom-spotify {
+    background-color: white;
+    color: black;
+    border-radius: 4px;
+    margin: 4px 2px 4px 2px;
+    padding: 0px 7px;
 }
 
 #custom-powermenu,
@@ -53,16 +62,12 @@ window#waybar.chromium {
     border-radius: 4px;
 }
 
-button {
-    box-shadow: inset 0 -3px transparent;
-}
 
 #workspaces {
     margin: 4px 2px 4px 2px;
     background: rgba(60,60,60,1);
     padding-right: 0px;
-    padding-left: 0px;
-    
+    padding-left: 0px;    
     border-radius: 4px;
 }
 
@@ -93,11 +98,6 @@ button {
     background-color: #eb4d4b;
 }
 
-#mode {
-    background-color: #64727D;
-    box-shadow: inset 0 -3px #ffffff;
-}
-
 #custom-powermenu {
     color: rgba(255,255,255, 0.85);
     margin-top: 4px;
@@ -108,19 +108,18 @@ button {
     font-weight: bold;
     transition: none;
     background: rgba(60,60,60,1);;
-    
 }
 
 #custom-powermenu:hover{
-    color: white;
+    color: #2094D5;
 }
 
-/* If workspaces is the leftmost module, omit left margin */
+/* If workspaces is the leftmost module, change left margin */
 .modules-left > widget:first-child > #custom-powermenu {
     margin-left: 8px;
 }
 
-/* If workspaces is the rightmost module, omit right margin */
+/* If workspaces is the rightmost module, change right margin */
 .modules-right > widget:last-child > #tray {
     margin-right: 8px;
 }
@@ -130,12 +129,11 @@ button {
     margin-bottom: 5px;
     padding-right: 10px;
     transition: none;
-    color:white;/* @color12;*/
-    /* background: rgba(60,60,60,1); */
+    color:white;
     background: transparent;
     font-weight: 900; 
     margin: 4px 2px 4px 2px;
-    
+    /* background: rgba(60,60,60,1); */
 }
 
 #battery,
@@ -150,7 +148,6 @@ button {
     padding-right: 10px;
     transition: none;
     background: rgba(60,60,60,1);
-    
     font-weight: bold;
 }
 
@@ -171,24 +168,6 @@ button {
     animation-direction: alternate;
 }
 
-#power-profiles-daemon {
-    padding-right: 15px;
-}
-
-#power-profiles-daemon.performance {
-    background-color: #f53c3c;
-    color: #ffffff;
-}
-
-#power-profiles-daemon.balanced {
-    background-color: #2980b9;
-    color: #ffffff;
-}
-
-#power-profiles-daemon.power-saver {
-    background-color: #2ecc71;
-    color: #000000;
-}
 
 label:focus {
     background-color: #000000;
@@ -213,7 +192,6 @@ label:focus {
     padding-right: 3px;
     background: rgba(60,60,60,1);;
     color: white;
-    
     font-weight: bold;
 }
 
@@ -233,27 +211,8 @@ label:focus {
     padding-right: 14px;
     padding-left: 6px;
     transition: none;
-    background: rgba(60,60,60,1);
-    
+    background: rgba(60,60,60,1);    
     font-weight: bold;
-}
-
-#custom-media {
-    background-color: #66cc99;
-    color: #2a5c45;
-    min-width: 100px;
-}
-
-#custom-media.custom-spotify {
-    background-color: #66cc99;
-}
-
-#custom-media.custom-vlc {
-    background-color: #ffa000;
-}
-
-#temperature.critical {
-    background-color: #eb4d4b;
 }
 
 #tray {
@@ -265,8 +224,7 @@ label:focus {
     margin-bottom: 4px;
     font-weight: bold;
     transition: none;
-    background: rgba(60,60,60,1);
-    
+    background: rgba(60,60,60,1);;
 }
 
 #tray > .passive {

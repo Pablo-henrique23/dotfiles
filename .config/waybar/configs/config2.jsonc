@@ -11,6 +11,7 @@
     "modules-left": [
         "custom/powermenu",
         "hyprland/workspaces",
+        "custom/spotify",
         "hyprland/window"
     ],
     "modules-center": [
@@ -24,24 +25,21 @@
         "pulseaudio",
         "tray"
     ],
+
+
     // Modules configuration
     "custom/powermenu": {
-	    "format":"",//"⏻",
-    	"on-click": "~/dotfiles/.config/rofi/powermenu/type-2/powermenu.sh",
-    	"tooltip": true,
-	    "tooltip-format": "powermenu"
-    },
-    "custom/whatsapp": {
-    	"format": "󰖣",
+        "format":"",//"⏻",
+        "on-click": "~/dotfiles/.config/rofi/powermenu/type-2/powermenu.sh",
         "tooltip": true,
-        "tooltip-format": "Whatsapp",
-        "on-click": "whatsdesk"
+        "tooltip-format": "Menu"
     },
-     "hyprland/workspaces": {
-         "disable-scroll": true,
-    	 "all-outputs": true,
-         "warp-on-scroll": false,
-         "format": "{name}",
+
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "warp-on-scroll": false,
+        "format": "{name}",
 //          "format-icons": {
 //    //          "urgent": "",
 //             "urgent":"!",
@@ -72,26 +70,38 @@
     },
     
     "hyprland/window": {
-        "format": "{initialTitle}",
+        "format": "{initialClass}",
         "rewrite": {
-            "(.*) Firefox": "󰈹 ",
-            "(.*) Konsole": " ",
-            "Alacritty": " ",
-            "winit window": " ",
-            "kitty": " ",
-            "whatsdesk":" ",
-            "Visual Studio Code":"󰨞 "
+            "firefox": "󰈹",
+            "(.*) Konsole": "",
+            "Alacritty": "",
+            "winit window": "",
+            "kitty": "",
+            "com.mitchellh.ghostty": "󰊠", // ghostty
+            "whatsdesk":"",
+            "Code":"󰨞"
+            // "Spotify (.*)": "Spotify"
         }	
+    },
+    "custom/spotify": {
+        "exec": "python3 ~/dotfiles/.config/waybar/custom/mediaplayer.py --player spotify",
+        "format": "{}",
+        "return-type": "json",
+        "on-click": "playerctl -p spotify play-pause",
+        "on-scroll-up": "playerctl -p spotify previous",
+        "on-scroll-down": "playerctl -p spotify next",
+        "on-click-right": "killall spotify",
+        "smooth-scrolling-threshold": 8,
+        "exec-if": "pgrep spotify"
     },
     
     "clock": {
         "timezone": "America/Sao_Paulo",
         "interval": 60,
-        "format": "   {:%H:%M}",
+        "format": "    {:%I:%M %p}",
         "max-length": 25,
         "tooltip": true,
         "tooltip-format": "<tt>{calendar}</tt>",
-    /*	"tooltip-format": "{:%A, %d/%m/%y}",*/
         "calendar": {
             "mode": "year",
             "mode-mon-col"  : 3,
@@ -103,31 +113,13 @@
                 "weeks":    "<span color='#99ffdd'><b>W{}</b></span>",
                 "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
                 "today":    "<span color='#ff6699'><b><u>{}</u></b></span>"
-                }
             }
-    	},
-	
+        }
+    },
+
     "cpu": {
-	"   interval": 5,
+	    "interval": 5,
         "format": "   {usage}%"
-    },
-
-    "memory": {
-       "interval": 5,
-       "format": "   {percentage}%",
-       "tooltip-format": "memory usage"
-    },
-
-    "disk": {
-       "interval": 5,
-       "format": "{percentage_used}%",
-       "unit": "MB",
-       "tooltip-format": "disk usage"
-    },
-    
-    "temperature": {
-       "format": " {temperatureC}°C",
-       "tooltip-format": "temperature"
     },
     
     "network": {
@@ -140,17 +132,6 @@
         "on-click-right": "killall nm-applet",
         "tooltip-format": "{ipaddr}/{essid}",
         "tooltip-format-disconnected": "Desconectado"
-
-    },
-
-    "group/info": {
-        "orientation": "horizontal",
-        "modules": ["cpu", "custom/separator","memory", "custom/separator", "temperature"]
-    },
-	
-    "custom/separator": {
-        "tooltip": false,
-	    "format": "|"
     },
 
     "battery": {
@@ -159,14 +140,11 @@
             "warning": 30,
             "critical": 15
         },
-//	"design-capacity": true,
         "format": "{capacity}% {icon}",
         "format-full": "{capacity}% {icon}",
         "format-charging": "{capacity}% 󱐥", //󰂄",
         "format-plugged": "{capacity}% 󱐥",
         "format-alt": "{time} {icon}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
         "format-icons": ["", "", "", "", ""]
     },
     
@@ -181,11 +159,7 @@
 
     "pulseaudio": {
         "format": "{volume}% {icon}", // {format_source}",
-//        "format-bluetooth": "{volume}% {icon} {format_source}",
-//        "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": "󰝟",
-//        "format-source": "{volume}% ",
-//        "format-source-muted": "",
         "format-icons": {
             "headphone": "",
             "hands-free": "",
