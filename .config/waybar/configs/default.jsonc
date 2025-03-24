@@ -13,8 +13,7 @@
         "custom/powermenu",
         "hyprland/workspaces",
         //"custom/whatsapp"
-        "hyprland/window",
-	    "custom/spotify"
+        "hyprland/window"
     ],
     "modules-center": [
         "clock"
