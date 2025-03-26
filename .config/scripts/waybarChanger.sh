@@ -11,8 +11,10 @@ SELECTION=$(printf "%s\n" "${OPTIONS[@]}" | rofi -dmenu -p "Escolha um perfil")
 STYLE_SELECTION=$(printf "%s\n" "${STYLES[@]}" | rofi -dmenu -p "Escolha um estilo")
 
 if [[ -n "$SELECTION" && -f "$CONFIG_DIR/$SELECTION.jsonc" && -n "$STYLE_SELECTION" && -f "$STYLE_DIR/$STYLE_SELECTION.css" ]]; then
+    
     echo "$CONFIG_DIR/$SELECTION.jsonc" > $HOME/dotfiles/.config/waybar/current_config.jsonc
     echo "$CONFIG_DIR/$STYLE_SELECTION.css" > $HOME/dotfiles/.config/waybar/current_style.css
+
     killall waybar
     ~/dotfiles/.config/scripts/reloadWaybar.sh "$CONFIG_DIR/$SELECTION.jsonc" "$STYLE_DIR/$STYLE_SELECTION.css"
 
