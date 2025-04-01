@@ -155,7 +155,9 @@ button {
     background-color: @color15;
     color: black;
     margin: 4px 2px 4px 2px;
-    padding: 0px 8px;
+    padding-right: 12px;
+    padding-left: 8px;
+    font-weight: 500;
 }
 
 
@@ -165,7 +167,8 @@ button {
 }
 
 /* If workspaces is the rightmost module, omit right margin */
-.modules-right > widget:last-child > #tray {
+.modules-right > widget:last-child > #tray, 
+.modules-right > widget:last-child > #pulseaudio {
     margin-right: 8px;
 }
 
@@ -298,14 +301,18 @@ label:focus {
 #pulseaudio:hover {
     color: black; /*@color15;*/
     margin-top: 4px;
-    margin-left: 0px;
+    margin-left: 2px;
     margin-bottom: 4px;
-    margin-right: 5px;
+    margin-right: 4px;
     padding-right: 14px;
     padding-left: 10px;
     /*font-weight: bold;*/
     transition: none;
     background: @color2;
+}
+
+#pulseaudio.muted {
+    padding-right: 10px;
 }
 
 #wireplumber {
