@@ -284,6 +284,8 @@ if [ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]; th
     ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#999'
 fi
 
-export PATH=$PATH:/home/pablo/.local/share/gem/ruby/3.3.0/bin
+
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin:/usr/local/go/bin:/home/pablo/.local/share/gem/ruby/3.3.0/bin
 # End of lines added by compinstall
 source /usr/share/nvm/init-nvm.sh
