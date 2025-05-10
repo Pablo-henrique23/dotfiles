@@ -16,7 +16,7 @@ if [[ -n "$SELECTION" && -f "$CONFIG_DIR/$SELECTION.jsonc" && -n "$STYLE_SELECTI
     echo "$CONFIG_DIR/$STYLE_SELECTION.css" > $HOME/dotfiles/.config/waybar/current_style.css
 
     killall waybar
-    ~/dotfiles/.config/scripts/reloadWaybar.sh "$CONFIG_DIR/$SELECTION.jsonc" "$STYLE_DIR/$STYLE_SELECTION.css"
+    ~/dotfiles/.config/scripts/reloadWaybar.sh
 
 else
     notify-send -t 2000 "Waybar" "Nenhuma configuração ou estilo válido selecionado."
