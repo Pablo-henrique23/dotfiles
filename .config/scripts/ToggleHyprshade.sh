@@ -3,7 +3,7 @@
 saida=$(hyprshade current)
 
 if [[ -z "$saida" ]]; then
-    hyprshade on blue-light-filter
+    hyprshade auto || hyprshade on blue-light-filter
     notify-send -e -u low -t 1500 "Hyprshade On"
 else
     hyprshade off
