@@ -261,6 +261,14 @@ if [ -x /usr/bin/dircolors ]; then
     alias ip='ip --color=auto'
     alias shut='shutdown now'
 
+    # GIT 
+    
+    alias ga='git add .'
+    alias gc='git commit -m'
+    alias gp='git push'
+    
+    #
+
     export LESS_TERMCAP_mb=$'\E[1;31m'     # begin blink
     export LESS_TERMCAP_md=$'\E[1;36m'     # begin bold
     export LESS_TERMCAP_me=$'\E[0m'        # reset bold/blink
@@ -290,4 +298,6 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin:/usr/local/go/bin:/home/pablo/.local/share/gem/ruby/3.3.0/bin:/opt/flutter/bin
 # End of lines added by compinstall
 source /usr/share/nvm/init-nvm.sh
-
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
