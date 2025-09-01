@@ -12,12 +12,16 @@
 	"display": {
 		"separator": "    ",
 		"bar": {
-			"charTotal": "=",
-			"charElapsed": "■",
+			"char": {
+				"total": "=",
+				"elapsed": "■",
+				},
 			"width": 10,
-			"borderLeft": "[ ",
-			"borderRight": " ]"
-			}
+			"border": {
+				"left": "[ ",
+				"right": " ]"
+				}
+			},
 		},
 	"modules": [
 		// {
@@ -68,6 +72,4 @@
 			"paddingLeft": 2
 		} */
 	]
-	
-	
 }
