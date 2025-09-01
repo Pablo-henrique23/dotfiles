@@ -7,4 +7,4 @@ if ! command -v yay &> /dev/null; then
 
 yay -S hyprshade pokemon-colorscripts-git
 
-cd ~/dotfiles && stow .
+cd stow .
