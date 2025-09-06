@@ -1,7 +1,6 @@
 # Dotfiles
 The dotfiles for my Arch Linux + Hyprland setup.
 
-**Yay is required!**
 
 ## Setup
 
