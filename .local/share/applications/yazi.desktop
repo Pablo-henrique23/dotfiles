@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
 Name=Yazi
-Exec=ghostty -e yazi
+Exec=alacritty -e yazi
 Terminal=false
 Categories=System;Utility;
