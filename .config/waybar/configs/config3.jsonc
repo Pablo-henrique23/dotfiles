@@ -1,0 +1,174 @@
+// -*- mode: jsonc -*-
+{
+    // "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)
+    "height": 28, // Waybar height (to be removed for auto height)
+    // "width": 1280, // Waybar width
+    "spacing": 4, // Gaps between modules (4px)
+    "margin-top": 0,
+    "margin-left": 0,
+    "margin-right": 0,
+    "modules-left": [
+        "custom/powermenu",
+        "hyprland/workspaces",
+        "custom/spotify",
+        "hyprland/window"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "cpu",
+        "network",
+        "battery",
+        "battery#bat2",
+        "pulseaudio",
+        "tray"
+    ],
+
+
+    // Modules configuration
+    "custom/powermenu": {
+        "format":"",//"⏻",
+        "on-click": "~/dotfiles/.config/rofi/powermenu/type-2/powermenu.sh",
+        "tooltip": true,
+        "tooltip-format": "Menu"
+    },
+
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "warp-on-scroll": false,
+        "format": "{name}",
+//          "format-icons": {
+//    //          "urgent": "",
+//             "urgent":"!",
+//             "1":"I",
+//             "2":"II",
+//             "3":"III",
+//             "4":"IV",
+//             "5":"V",
+//             "6":"VI",
+//             "7":"VII",
+//             "8":"VIII",
+//             "9":"IX",
+//             "10":"X",
+//             "11":"XI",
+//             "12":"XII",
+//             "13":"XIII",
+//             "14":"XIV",
+//             "15":"XV",
+//             "16":"XVI",
+//             "17":"XVII",
+//             "18":"XVIII",
+//             "19":"XIX",
+//             "20":"XX"
+//         },
+        "persistent-workspaces":{
+            "*": 3
+	    }
+    },
+    
+    "hyprland/window": {
+        "format": "{initialClass}",
+        "rewrite": {
+            "firefox": "󰈹",
+            "(.*) Konsole": "",
+            "Alacritty": "",
+            "winit window": "",
+            "kitty": "",
+            "com.mitchellh.ghostty": "󰊠", // ghostty
+            "whatsdesk":"",
+            "Code":"󰨞"
+            // "Spotify (.*)": "Spotify"
+        }	
+    },
+    "custom/spotify": {
+        "exec": "python3 ~/dotfiles/.config/waybar/custom/mediaplayer.py --player spotify",
+        "format": "{}",
+        "return-type": "json",
+        "on-click": "playerctl -p spotify play-pause",
+        "on-scroll-up": "playerctl -p spotify previous",
+        "on-scroll-down": "playerctl -p spotify next",
+        "on-click-right": "killall spotify",
+        "smooth-scrolling-threshold": 8,
+        "exec-if": "pgrep spotify"
+    },
+    
+    "clock": {
+        "timezone": "America/Sao_Paulo",
+        "interval": 60,
+        "format": "    {:%I:%M %p}",
+        "max-length": 25,
+        "tooltip": true,
+        "tooltip-format": "<tt>{calendar}</tt>",
+        "calendar": {
+            "mode": "year",
+            "mode-mon-col"  : 3,
+            "weeks-pos"     : "right",
+            "on-scroll"     : 1,
+            "format": {
+                "months":   "<span color='#ffead3'><b>{}</b></span>",
+                "days":     "<span color='#ecc6d9'><b>{}</b></span>",
+                "weeks":    "<span color='#99ffdd'><b>W{}</b></span>",
+                "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+                "today":    "<span color='#ff6699'><b><u>{}</u></b></span>"
+            }
+        }
+    },
+
+    "cpu": {
+	    "interval": 5,
+        "format": "   {usage}%"
+    },
+    
+    "network": {
+        "interval": 5,
+        "format": "{essid}",
+        "format-wifi": "󱚻   {bandwidthTotalBytes}",
+        "format-disconnected": "󰖪 ",
+        "max-length": 15,
+        "on-click": "nm-applet --indicator",
+        "on-click-right": "killall nm-applet",
+        "tooltip-format": "{ipaddr}/{essid}",
+        "tooltip-format-disconnected": "Desconectado"
+    },
+
+    "battery": {
+        "states": {
+            "good": 70,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-full": "{capacity}% {icon}",
+        "format-charging": "{capacity}% 󱐥", //󰂄",
+        "format-plugged": "{capacity}% 󱐥",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
+    
+    "battery#bat2": {
+        "bat": "BAT2"
+    },
+    
+    "tray": {
+        "icon-size": 16,
+	    "spacing": 10
+    },
+
+    "pulseaudio": {
+        "format": "{volume}% {icon}", // {format_source}",
+        "format-muted": "󰝟",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    }
+}
