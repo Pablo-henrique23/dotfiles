@@ -18,10 +18,10 @@
         "clock"
     ],
     "modules-right": [
-        "cpu",
-        "network",
+        // "cpu",
         "battery",
-        "battery#bat2",
+        // "battery#bat2",
+        "network",
         "pulseaudio",
         "tray"
     ],
@@ -39,8 +39,8 @@
         "disable-scroll": true,
         "all-outputs": true,
         "warp-on-scroll": false,
-        "format": "{name}",
-//          "format-icons": {
+        "format": "{icon}",
+//        "format-icons":"{
 //    //          "urgent": "",
 //             "urgent":"!",
 //             "1":"I",
@@ -98,7 +98,7 @@
     "clock": {
         "timezone": "America/Sao_Paulo",
         "interval": 60,
-        "format": "    {:%I:%M %p}",
+        "format": "{:%A, %H:%M}",
         "max-length": 25,
         "tooltip": true,
         "tooltip-format": "<tt>{calendar}</tt>",
@@ -125,12 +125,12 @@
     "network": {
         "interval": 5,
         "format": "{essid}",
-        "format-wifi": "󱚻   {bandwidthTotalBytes}",
+        "format-wifi": "󱚻 ",
         "format-disconnected": "󰖪 ",
         "max-length": 15,
         "on-click": "nm-applet --indicator",
         "on-click-right": "killall nm-applet",
-        "tooltip-format": "{ipaddr}/{essid}",
+        "tooltip-format": "{ipaddr}/{essid}/{bandwidthTotalBytes}",
         "tooltip-format-disconnected": "Desconectado"
     },
 

@@ -1,4 +1,4 @@
-@import '../colors-waybar.css';
+@import '../../colors-waybar.css';
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: sans-serif, Roboto;
@@ -8,11 +8,11 @@
 }
 #waybar {
     border-radius: 4px;
-    background: rgba(40,40,40,1);
+    background: transparent;
 }
 
 #window {
-    background: rgba(80,80,80,1);
+    background: rgba(60,60,60,1);
     color: white;
     margin: 4px 2px 4px 2px;
     padding-right: 12px;
@@ -30,6 +30,15 @@ window#waybar.empty #window{
     background: transparent;
 }
 
+window#waybar.termite {
+    background-color: #3F3F3F;
+}
+
+window#waybar.chromium {
+    background-color: #000000;
+    border: none;
+}
+
 #custom-spotify {
     background-color: white;
     color: black;
@@ -38,11 +47,13 @@ window#waybar.empty #window{
     padding: 0px 7px;
 }
 
+#custom-powermenu,
 #custom-whatsapp,
 #cpu,
 #memory,
 #temperature,
 #clock,
+#info,
 #network,
 #battery,
 #pulseaudio,
@@ -51,9 +62,10 @@ window#waybar.empty #window{
     border-radius: 4px;
 }
 
+
 #workspaces {
     margin: 4px 2px 4px 2px;
-    background: @color10;
+    background: rgba(60,60,60,1);
     padding-right: 0px;
     padding-left: 0px;    
     border-radius: 4px;
@@ -63,7 +75,7 @@ window#waybar.empty #window{
     border-radius: 4px;
     padding: 0 6px;
     margin: 0px;
-    background: transparent;
+    background: rgba(60,60,60,1);
     color: rgba(255,255,255, 0.85);
     font-weight: bold;
 }
@@ -75,7 +87,7 @@ window#waybar.empty #window{
 
 #workspaces button.active {
     color: black;
-    background-color: rgba(255,255,255, 0.9);
+    background-color: rgba(255,255,255, 0.85);
 }
 
 #workspaces button.focused {
@@ -88,8 +100,6 @@ window#waybar.empty #window{
 
 #custom-powermenu {
     color: rgba(255,255,255, 0.85);
-    background: rgba(100, 100, 100, 1);
-    border-radius: 4px;
     margin-top: 4px;
     margin-left: 5px;
     margin-bottom: 4px;
@@ -97,6 +107,7 @@ window#waybar.empty #window{
     padding-left: 8px;
     font-weight: bold;
     transition: none;
+    background: rgba(60,60,60,1);
 }
 
 #custom-powermenu:hover{
@@ -120,10 +131,9 @@ window#waybar.empty #window{
     padding-right: 10px;
     transition: none;
     color:white;
-    background: transparent;
     font-weight: 900; 
     margin: 4px 2px 4px 2px;
-    background: rgba(90,90,90,1);
+    background: rgba(60,60,60,1);
 }
 
 #battery,
@@ -137,7 +147,7 @@ window#waybar.empty #window{
     padding-left: 6px;
     padding-right: 10px;
     transition: none;
-    background: @color2;
+    background: rgba(60,60,60,1);
     font-weight: bold;
 }
 
@@ -166,9 +176,10 @@ label:focus {
 #cpu {
     padding-left: 6px;
     padding-right: 5px;
-    background: @color8;
+    background: rgba(60,60,60,1);
     margin: 4px 2px 4px 2px;
     color: white;
+    
     font-weight: bold;
 }
 
@@ -179,12 +190,13 @@ label:focus {
     margin-right: 2px;
     padding-left: 5px;
     padding-right: 3px;
-    background: @color3;
+    background: rgba(60,60,60,1);
     color: white;
     font-weight: bold;
 }
 
 #network.disconnected {
+    background: rgba(60,60,60,1);
     color: white;
 }
 
@@ -193,18 +205,14 @@ label:focus {
 #pulseaudio:hover {
     color: white;
     margin-top: 4px;
-    margin-left: 2px;
+    margin-left: 0px;
     margin-bottom: 4px;
-    margin-right: 4px;
+    margin-right: 5px;
     padding-right: 14px;
     padding-left: 6px;
     transition: none;
-    background: @color11;
+    background: rgba(60,60,60,1);    
     font-weight: bold;
-}
-
-#pulseaudio.muted {
-    padding-right: 10px;
 }
 
 #tray {
@@ -216,7 +224,7 @@ label:focus {
     margin-bottom: 4px;
     font-weight: bold;
     transition: none;
-    background: @color1;
+    background: rgba(60,60,60,1);
 }
 
 #tray > .passive {

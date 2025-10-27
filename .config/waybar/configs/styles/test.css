@@ -1,4 +1,4 @@
-@import '../colors-waybar.css';
+@import '../../colors-waybar.css';
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: sans-serif, Roboto;
@@ -7,13 +7,13 @@
     min-height: 0px;
 }
 #waybar {
-    border-radius: 0px;
+    border-radius: 4px;
     background: rgba(40,40,40,1);
 }
 
 #window {
     background: rgba(60,60,60,1);
-    color: white;
+    color: @color1;
     margin: 4px 2px 4px 2px;
     padding-right: 12px;
     padding-left: 8px;
@@ -76,7 +76,8 @@ window#waybar.chromium {
     padding: 0 6px;
     margin: 0px;
     background: rgba(60,60,60,1);
-    color: rgba(255,255,255, 0.85);
+    /* color: rgba(255,255,255, 0.85); */
+    color: @color2;
     font-weight: bold;
 }
 
@@ -130,7 +131,7 @@ window#waybar.chromium {
     margin-bottom: 5px;
     padding-right: 10px;
     transition: none;
-    color:white;
+    color: @color3;
     background: transparent;
     font-weight: 900; 
     margin: 4px 2px 4px 2px;
@@ -141,7 +142,7 @@ window#waybar.chromium {
 #battery.charging,
 #battery.plugged,
 #battery.critical:not(.charging){
-    color: white;
+    color: @color4;
     margin-top: 4px;
     margin-left: 0px;
     margin-bottom: 4px;
@@ -161,7 +162,7 @@ window#waybar.chromium {
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) { 
     font-weight: bold;
-    color: white;/*@color15;*/
+    color: @color5;/*@color15;*/
     animation-name: blink;
     animation-duration: 1.0s;
     animation-timing-function: steps(12);
@@ -179,7 +180,7 @@ label:focus {
     padding-right: 5px;
     background: rgba(60,60,60,1);
     margin: 4px 2px 4px 2px;
-    color: white;
+    color: @color6;
     
     font-weight: bold;
 }
@@ -192,19 +193,19 @@ label:focus {
     padding-left: 5px;
     padding-right: 3px;
     background: rgba(60,60,60,1);
-    color: white;
+    color: @color7;
     font-weight: bold;
 }
 
 #network.disconnected {
     background: rgba(60,60,60,1);
-    color: white;
+    color: @color8;
 }
 
 #pulseaudio,
 #pulseaudio.muted,
 #pulseaudio:hover {
-    color: white;
+    color: @color9;
     margin-top: 4px;
     margin-left: 0px;
     margin-bottom: 4px;
@@ -221,7 +222,7 @@ label:focus {
 }
 
 #tray {
-    color: white;
+    color: @color10;
     margin-top: 4px;
     margin-left: 0px;
     padding-right: 10px;

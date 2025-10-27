@@ -1,4 +1,4 @@
-@import '../colors-waybar.css';
+@import '../../colors-waybar.css';
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: sans-serif, Roboto;
@@ -8,7 +8,7 @@
 }
 #waybar {
     border-radius: 4px;
-    background: transparent;
+    background: rgba(40,40,40,1);
 }
 
 #window {
@@ -131,9 +131,10 @@ window#waybar.chromium {
     padding-right: 10px;
     transition: none;
     color:white;
+    background: transparent;
     font-weight: 900; 
     margin: 4px 2px 4px 2px;
-    background: rgba(60,60,60,1);
+    /* background: rgba(60,60,60,1); */
 }
 
 #battery,
@@ -207,12 +208,16 @@ label:focus {
     margin-top: 4px;
     margin-left: 0px;
     margin-bottom: 4px;
-    margin-right: 5px;
+    margin-right: 4px;
     padding-right: 14px;
     padding-left: 6px;
     transition: none;
     background: rgba(60,60,60,1);    
     font-weight: bold;
+}
+
+#pulseaudio.muted {
+    padding-right: 10px;
 }
 
 #tray {
