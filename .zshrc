@@ -297,4 +297,4 @@ fi
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin:/usr/local/go/bin:/home/pablo/.local/share/gem/ruby/3.3.0/bin:/opt/flutter/bin
 # End of lines added by compinstall
-source /usr/share/nvm/init-nvm.sh
+#source /usr/share/nvm/init-nvm.sh
