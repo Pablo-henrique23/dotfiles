@@ -22,7 +22,7 @@
 
 
 # Set some variables
-wall_dir="${HOME}/dotfiles/.config/images/Wallpapers/OneMonitor/"
+wall_dir="${HOME}/dotfiles/Imagens/images/Wallpapers/OneMonitor/"
 cacheDir="${HOME}/.cache/jp/${theme}"
 
 # Create cache dir if not exists
