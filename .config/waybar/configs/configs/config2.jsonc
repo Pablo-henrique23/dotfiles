@@ -72,13 +72,13 @@
     "hyprland/window": {
         "format": "{initialClass}",
         "rewrite": {
-            "firefox": "󰈹",
+            "firefox": " 󰈹",
             "(.*) Konsole": "",
             "Alacritty": "",
             "winit window": "",
             "kitty": "",
-            "com.mitchellh.ghostty": "󰊠", // ghostty
-            "whatsdesk":"",
+            "com.mitchellh.ghostty": " 󰊠", // ghostty
+            "whatsdesk":" ",
             "Code":"󰨞"
             // "Spotify (.*)": "Spotify"
         }	
