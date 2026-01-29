@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=GrandChase
+Comment=Play this game on Steam
+Exec=steam steam://rungameid/985810
+Icon=steam_icon_985810
+Terminal=false
+Type=Application
+Categories=Game;
