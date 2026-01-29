@@ -1,7 +1,0 @@
-[Desktop Entry]
-Exec=ghostty --command=yazi
-Name=yazi
-NoDisplay=true
-StartupNotify=false
-Type=Application
-X-KDE-GlobalAccel-CommandShortcut=true
