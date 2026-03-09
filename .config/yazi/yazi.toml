@@ -43,8 +43,7 @@ play = [
 	{ run = "mediainfo %s1 & pause", block = true, desc = "Show media info", for = "windows" },
 ]
 open = [
-	{ run = "xdg-open %s1",    desc = "Open", for = "linux" },
-	{ run = "export BROWSER=$(xdg-settings get default-web-browser | awk -F . '{print $1}') && $BROWSER %s",    desc = "Open with default browser", for = "linux" },
+	{ run = "xdg-open %s1",    desc = "Open with system choice", for = "linux" },
 	{ run = "open %s",         desc = "Open", for = "macos" },
 	{ run = 'start "" %s1',    desc = "Open", for = "windows", orphan = true },
 	{ run = "termux-open %s1", desc = "Open", for = "android" },
@@ -64,7 +63,7 @@ download = [
 	{ run = "ya emit download %S",        desc = "Download" },
 ]
 def_browser = [
-	{ run = "export BROWSER=$(xdg-settings get default-web-browser | awk -F . '{print $1}') && $BROWSER %s", desc = "Open with default browser" }
+	{ run = "export BROWSER=$(xdg-settings get default-web-browser | awk -F . '{print $1}') && $BROWSER %s",    desc = "Open with default browser", for = "linux" },
 ]
 
 [open]
@@ -87,7 +86,7 @@ rules = [
 	# Virtual file system
 	{ mime = "vfs/{absent,stale}", use = "download" },
 	# PDF
-	{ mime = "application/pdf", use = ["def_browser"] },
+	{ mime = "application/pdf", use = ["def_browser", "open"] },
 	# Fallback
 	{ url = "*", use = [ "open", "reveal" ] },
 ]
