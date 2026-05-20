@@ -65,6 +65,9 @@ download = [
 def_browser = [
 	{ run = "export BROWSER=$(xdg-settings get default-web-browser | awk -F . '{print $1}') && $BROWSER %s",    desc = "Open with default browser", for = "linux" },
 ]
+play_video = [
+	{ run = "vlc %s1", desc = "Open video with VLC", for = "Linux" }
+]
 
 [open]
 rules = [
@@ -75,7 +78,7 @@ rules = [
 	# Image
 	{ mime = "image/*", use = [ "open", "reveal" ] },
 	# Media
-	{ mime = "{audio,video}/*", use = [ "play", "reveal" ] },
+	{ mime = "{audio,video}/*", use = [ "play_video", "reveal" ] },
 	# Archive
 	{ mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", use = [ "extract", "reveal" ] },
 	# JSON

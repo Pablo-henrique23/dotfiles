@@ -1,0 +1,24 @@
+[Desktop Entry]
+Actions=Session 5a94336e48400783dbd1ac169dfc65e8;
+Categories=Qt;KDE;Utility;TextEditor;Development;
+Comment[pt_BR]=Editor de texto avançado do KDE
+Comment=KDE Advanced Text Editor
+Exec=kate -b %U
+GenericName[pt_BR]=Editor de textos avançado
+GenericName=Advanced Text Editor
+Icon=kate
+InitialPreference=9
+Keywords[pt_BR]=texto;txt;editor;programação;programador;desenvolvimento;desenvolvedor;código;
+Keywords=text;txt;editor;programming;programmer;development;developer;code;
+MimeType=text/plain;inode/directory;
+Name[pt_BR]=Kate
+Name=Kate
+StartupNotify=true
+StartupWMClass=kate
+Type=Application
+X-DocPath=kate/index.html
+X-KDE-HasTempFileOption=true
+
+[Desktop Action Session 5a94336e48400783dbd1ac169dfc65e8]
+Exec=kate -n -s 'Nova sessão do Kate'
+Name=Nova sessão do Kate
