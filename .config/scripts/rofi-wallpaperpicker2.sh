@@ -56,6 +56,8 @@ wall_selection=$(find "${wall_dir}" -type f \( -iname "*.jpg" -o -iname "*.jpeg"
 
 # Set the wallpaper
 [[ -n "$wall_selection" ]] || exit 1
+killall mpvpaper
+pgrep -x awww-daemon >/dev/null || awww-daemon --format xrgb &
 awww img "${wall_dir}/${wall_selection}" --transition-step 15 --transition-fps 30 
 
 # Troca o tema de tudo

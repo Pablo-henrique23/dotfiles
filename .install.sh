@@ -9,8 +9,10 @@ if ! command -v yay &> /dev/null; then
 	sudo pacman -S --needed git base-devel && cd .. && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && yay -Y --gendb && yay -Syu --devel
 fi
 
-yay -S hyprshade pokemon-colorscripts-git
+yay -S hyprshade pokemon-colorscripts-git mpvpaper
 
 cd dotfiles && stow .
 
 # se estiver no KDE, sudo pacman -S flatpak packagekit-qt6
+
+#git clone --single-branch https://github.com/GhostNaN/mpvpaper && cd mpvpaper && meson setup build --prefix=/usr/local && ninja -C build && ninja -C build install

@@ -10,6 +10,8 @@ source ~/.cache/wal/colors.sh
 cp ~/.cache/wal/colors-waybar.css ~/dotfiles/.config/waybar/colors-waybar.css
 
 # Limpa o cache e troca o wallpaper
+killall mpvpaper
+pgrep -x awww-daemon >/dev/null || awww-daemon --format xrgb &
 awww clear-cache; awww img $wallpaper --transition-step 15 --transition-fps 30
 
 # Recarrega a waybar

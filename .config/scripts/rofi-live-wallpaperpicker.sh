@@ -22,13 +22,13 @@
 
 
 # Set some variables
-wall_dir="${HOME}/dotfiles/Imagens/images/Wallpapers/OneMonitor/"
+wall_dir="${HOME}/dotfiles/Imagens/images/Wallpapers/Animated"
 cacheDir="${HOME}/.cache/jp/${theme}"
 
 # Create cache dir if not exists
 if [ ! -d "${cacheDir}" ] ; then
         mkdir -p "${cacheDir}"
-    fi
+fi
 
 
 physical_monitor_size=14
@@ -41,25 +41,27 @@ rofi_override="element-icon{size:50px;border-radius:0px;}"
 
 rofi_command="rofi -x11 -dmenu -theme ${HOME}/dotfiles/.config/rofi/config.rasi -theme-str ${rofi_override}"
 # Convert images in directory and save to cache dir
-for imagen in "$wall_dir"/*.{jpg,jpeg,png,webp,gif}; do
-	if [ -f "$imagen" ]; then
-		nombre_archivo=$(basename "$imagen")
-			if [ ! -f "${cacheDir}/${nombre_archivo}" ] ; then
-				convert -strip "$imagen" -thumbnail 500x500^ -gravity center -extent 500x500 "${cacheDir}/${nombre_archivo}"
-			fi
-    fi
+for file in "$wall_dir"/*.{mp4,gif}; do
+	[ -f "$file" ] || continue
+
+	nombre_archivo=$(basename "$file")
+	base_name="${nombre_archivo%.*}"
+	thumb="${cacheDir}${base_name}.png"
+	if [ ! -f "$thumb" ]; then
+		ffmpeg -y -i "$file" -vf "scale=500:500:force_original_aspect_ratio=increase,crop=500:500" -frames:v 1 "$thumb"
+    	fi
+
 done
 
 
 
 # Select a picture with rofi
-wall_selection=$(find "${wall_dir}" -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.webp" \) -exec basename {} \; | sort | while read -r A ; do  echo -en "$A\x00icon\x1f""${cacheDir}"/"$A\n" ; done | $rofi_command)
+wall_selection=$(find "${wall_dir}" -type f \( -iname "*.mp4" -o -iname "*.gif" \) -exec basename {} \; | sort | while read -r A ; do  echo -en "$A\x00icon\x1f""${cacheDir}"/"${A%.*}.png\n" ; done | $rofi_command)
 
 # Set the wallpaper
 [[ -n "$wall_selection" ]] || exit 1
-killall mpvpaper
-pgrep -x awww-daemon >/dev/null || awww-daemon --format xrgb &
-awww img "${wall_dir}/${wall_selection}" --transition-step 15 --transition-fps 30 
+killall awww-daemon mpvpaper
+mpvpaper -o "loop-file=inf hwdec=auto-safe" ALL "${wall_dir}/${wall_selection}" &
 
 # Troca o tema de tudo
 wal -i "${wall_dir}/${wall_selection}"
