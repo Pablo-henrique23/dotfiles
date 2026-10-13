@@ -61,7 +61,8 @@ wall_selection=$(find "${wall_dir}" -type f \( -iname "*.mp4" -o -iname "*.gif" 
 # Set the wallpaper
 [[ -n "$wall_selection" ]] || exit 1
 killall awww-daemon mpvpaper
-mpvpaper -o "loop-file=inf hwdec=auto-safe" ALL "${wall_dir}/${wall_selection}" &
+mpvpaper -o "no-audio loop-file=inf hwdec=auto-safe" ALL "${wall_dir}/${wall_selection}" &
+echo "${wall_dir}/${wall_selection}" > "${HOME}/dotfiles/.config/.last_live_wallpaper.txt"
 
 # Troca o tema de tudo
 wal -i "${wall_dir}/${wall_selection}"
